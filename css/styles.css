@@ -1,0 +1,35 @@
+/**
+* @name style.css
+* @file Manage the root of styles and effects.
+*/
+
+:root {
+    --primary-color: #114B5F;
+    --secundary-color: #539489;
+    --tertiary-color: #F77F00;
+    --navbar-color: #EDE5D4;
+    --fade-color: #000000bf;
+
+
+    --navbar-height: 70px;
+
+    /* --main-font: font-family: "Poppins", sans-serif;
+    --secundary-font: font-family: "Mulish", sans-serif; */
+}
+
+body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.userPageContent {
+    position: fixed;
+    top: var(--navbar-height);
+    width: 100%;
+    height: calc(100% - var(--navbar-height));
+}

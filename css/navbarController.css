@@ -1,0 +1,35 @@
+.navbarController {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    height: var(--navbar-height);
+}
+
+.hamburgerMenu {
+    box-sizing: border-box;
+    width: 42px;
+    height: 12px;
+    background-color: var(--primary-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburgerMenu::before,
+.hamburgerMenu::after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 12px;
+    background-color: var(--primary-color);
+    bottom: -15px;
+}
+
+.bannerLogo {
+    width: 85%;
+    height: 3.5em;
+}
