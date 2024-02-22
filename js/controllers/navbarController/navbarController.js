@@ -7,15 +7,25 @@ export class NavbarController extends Controller {
         super(appManager, parent);
         this.view = new View(parent);
         this.view.container.className = 'navbarController';
-        this.createMobileMenu();
-        this.button = div(this.view.container, { className: 'hamburgerMenu', onclick: this.openNavbar.bind(this) });
+        this.openButton = div(this.view.container, { className: 'hamburgerMenu', onclick: this.openNavbar.bind(this) });
         this.bannerLogo = img(this.view.container, { className: 'bannerLogo' });
         this.bannerLogo.src = '../assets/images/brand.png';
+    }
+
+    openNavbar() {
+        this.createMobileMenu();
+        this.moveFrom();
+    }
+
+    closeNavbar() {
+        this.view.container.removeChild(this.mobileMenu);
+        this.mobileMenu.classList.remove('nav');
     }
 
     createMobileMenu() {
         this.mobileMenu = this.createNav('nav', this.view.container, 'nav');
         this.menuList = this.createNav('ul', this.mobileMenu, 'navList');
+        this.closeButton = div(this.menuList, { className: 'closeMenu', onclick: this.closeNavbar.bind(this) });
         this.options = ['Inicio', 'Verduras', 'Frutas', 'Entregas'];
         this.icons = [
             '../assets/icons/home.png',
@@ -63,8 +73,7 @@ export class NavbarController extends Controller {
         return link;
     }
 
-
-    openNavbar() {
-        console.log('hola');
+    moveFrom() {
+        gsap.from(this.mobileMenu, { x: -40, duration: 1 });
     }
 }
