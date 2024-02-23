@@ -3,6 +3,7 @@
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
     user-select: none;
+    outline: none;
     margin: 0;
     padding: 0;
     border: 0;

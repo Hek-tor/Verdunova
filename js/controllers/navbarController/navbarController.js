@@ -1,4 +1,4 @@
-import { div, img } from "../../libraries/html.js";
+import { div, img, p, ul } from "../../libraries/html.js";
 import { View } from "../../views/view.js";
 import { Controller } from "../Controller.js";
 
@@ -23,9 +23,15 @@ export class NavbarController extends Controller {
     }
 
     createMobileMenu() {
-        this.mobileMenu = this.createNav('nav', this.view.container, 'nav');
-        this.menuList = this.createNav('ul', this.mobileMenu, 'navList');
+        this.mobileMenu = div(this.view.container, { className: 'nav' });
+        this.menuList = ul(this.mobileMenu, { className: 'navList' });
         this.closeButton = div(this.menuList, { className: 'closeMenu', onclick: this.closeNavbar.bind(this) });
+        this.copyright = div(this.mobileMenu, { className: 'copyright' });
+        this.brand = img(this.copyright, { className: 'brand' });
+        this.copyText = p(this.copyright, { className: 'copyText' });
+        this.brand.src = '../assets/images/Verdunova.png';
+        this.copyText.textContent = 'Copyright 2024. All rights reserved';
+
         this.options = ['Inicio', 'Verduras', 'Frutas', 'Entregas'];
         this.icons = [
             '../assets/icons/home.png',
@@ -33,7 +39,6 @@ export class NavbarController extends Controller {
             '../assets/icons/fruta.png',
             '../assets/icons/entregas.png'
         ];
-
         this.options.forEach((option, index) => {
             const li = this.createMenuItem('li', this.menuList);
             const img = this.createImage(this.icons[index], 'Icono');
@@ -41,14 +46,7 @@ export class NavbarController extends Controller {
 
             li.appendChild(img);
             li.appendChild(link);
-        });
-    }
-
-    createNav(tagName, parent, className) {
-        const element = document.createElement(tagName);
-        if (className) element.className = className;
-        parent.appendChild(element);
-        return element;
+        })
     }
 
     createMenuItem(tagName, parent) {
