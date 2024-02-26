@@ -18,8 +18,10 @@ export class NavbarController extends Controller {
     }
 
     closeNavbar() {
-        this.view.container.removeChild(this.mobileMenu);
-        this.mobileMenu.classList.remove('nav');
+        if (this.mobileMenu && this.mobileMenu.parentNode) {
+            this.mobileMenu.parentNode.removeChild(this.mobileMenu);
+            this.mobileMenu.classList.remove('nav');
+        }
     }
 
     createMobileMenu() {
@@ -47,6 +49,15 @@ export class NavbarController extends Controller {
             li.appendChild(img);
             li.appendChild(link);
         })
+
+        document.addEventListener('click', function (event) {
+            let nav = document.querySelector('.nav');
+            let openBtn = document.querySelector('.hamburgerMenu');
+            let closeBtn = document.querySelector('.closeMenu');
+            if (nav && !nav.contains(event.target) && event.target !== openBtn && event.target !== closeBtn) {
+                this.closeNavbar();
+            }
+        }.bind(this));
     }
 
     createMenuItem(tagName, parent) {
