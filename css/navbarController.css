@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: 0.8em 0 0 1em;
+    padding: 0.5em 0 0 1em;
     width: 100%;
     position: sticky;
 }
@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 65vw;
-    height: 93vh;
+    height: 100vh;
     top: 0;
     left: 0;
     position: absolute;
