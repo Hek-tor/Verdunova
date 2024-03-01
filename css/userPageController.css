@@ -13,9 +13,70 @@
     width: 100%;
     height: 380px;
 
-    font-family: "Mulish", sans-serif;
-    font-size: 1.8em;
-    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7em;
     text-align: center;
     color: var(--primary-color);
+}
+
+.benefits {
+    margin-top: 2em;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.callToActions {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.benefitOption {
+    background-color: var(--secundary-color);
+    border-radius: 100%;
+    width: 6.8em;
+    height: 6.8em;
+    padding: 1em 0 0 1.3em;
+}
+
+.benefitIcon {
+    width: 4.5rem;
+}
+
+.textBenefits {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+
+@media (width <=420px) {
+    .hero {
+        padding: 50px;
+        width: 100%;
+        height: 300px;
+        font-size: 1.3em;
+    }
+
+    .benefitOption {
+        border-radius: 50%;
+        width: 6em;
+        height: 6em;
+        padding: 1em 0 0 1em;
+    }
+
+    .benefitIcon {
+        width: 4rem;
+    }
+
+    .textBenefits {
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
 }

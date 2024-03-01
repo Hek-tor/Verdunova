@@ -1,7 +1,7 @@
 'use strict';
 import { div } from "./libraries/html.js";
 import { NavbarController } from "./controllers/navbarController/navbarController.js";
-import { UserPageController } from "./controllers/UserPageController/UserPageController.js";
+import { UserPageController } from "./controllers/UserPageController/userPageController.js";
 
 
 export class AppManager {
