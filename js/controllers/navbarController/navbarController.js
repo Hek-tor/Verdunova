@@ -36,10 +36,10 @@ export class NavbarController extends Controller {
 
         this.options = ['Inicio', 'Verduras', 'Frutas', 'Entregas'];
         this.icons = [
-            '../assets/icons/home.png',
-            '../assets/icons/verdura.png',
-            '../assets/icons/fruta.png',
-            '../assets/icons/entregas.png'
+            '../assets/icons/home.webp',
+            '../assets/icons/verdura.webp',
+            '../assets/icons/fruta.webp',
+            '../assets/icons/entregas.webp'
         ];
         this.options.forEach((option, index) => {
             const li = this.createMenuItem('li', this.menuList);
@@ -51,9 +51,9 @@ export class NavbarController extends Controller {
         })
 
         document.addEventListener('click', function (event) {
-            let nav = document.querySelector('.nav');
-            let openBtn = document.querySelector('.hamburgerMenu');
-            let closeBtn = document.querySelector('.closeMenu');
+            const nav = document.querySelector('.nav');
+            const openBtn = document.querySelector('.hamburgerMenu');
+            const closeBtn = document.querySelector('.closeMenu');
             if (nav && !nav.contains(event.target) && event.target !== openBtn && event.target !== closeBtn) {
                 this.closeNavbar();
             }
@@ -83,6 +83,6 @@ export class NavbarController extends Controller {
     }
 
     moveFrom() {
-        gsap.from(this.mobileMenu, { x: -40, duration: 1 });
+        gsap.from(this.mobileMenu, { x: -70, duration: 0.5 });
     }
 }

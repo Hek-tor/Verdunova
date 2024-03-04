@@ -18,17 +18,17 @@ export class UserPageView extends ViewForController {
         this.ctaThree = div(this.callToActions, { className: 'benefitOption' });
 
         const benefitIconOne = document.createElement('img');
-        benefitIconOne.setAttribute('src', '../assets/icons/alimentos-organicos.png');
+        benefitIconOne.setAttribute('src', '../assets/icons/alimentos-organicos.webp');
         benefitIconOne.className = 'benefitIcon';
         this.ctaOne.appendChild(benefitIconOne);
 
         const benefitIconTwo = document.createElement('img');
-        benefitIconTwo.setAttribute('src', '../assets/icons/nota.png');
+        benefitIconTwo.setAttribute('src', '../assets/icons/nota.webp');
         benefitIconTwo.className = 'benefitIcon';
         this.ctaTwo.appendChild(benefitIconTwo);
 
         const benefitIconThree = document.createElement('img');
-        benefitIconThree.setAttribute('src', '../assets/icons/delivery.png');
+        benefitIconThree.setAttribute('src', '../assets/icons/delivery.webp');
         benefitIconThree.className = 'benefitIcon';
         this.ctaThree.appendChild(benefitIconThree);
 
