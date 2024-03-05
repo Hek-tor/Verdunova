@@ -1,8 +1,8 @@
-import { div } from "../libraries/html.js";
+import { section } from "../libraries/html.js";
 
 export class View {
     constructor(parent) {
         this.parent = parent;
-        this.container = div(parent, null);
+        this.container = section(parent, null);
     }
 }

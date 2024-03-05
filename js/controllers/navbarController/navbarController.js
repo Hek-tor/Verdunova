@@ -9,7 +9,8 @@ export class NavbarController extends Controller {
         this.view.container.className = 'navbarController';
         this.openButton = div(this.view.container, { className: 'hamburgerMenu', onclick: this.openNavbar.bind(this) });
         this.bannerLogo = img(this.view.container, { className: 'bannerLogo' });
-        this.bannerLogo.src = '../assets/images/brand.png';
+        this.bannerLogo.src = '../assets/images/brand.webp';
+        this.bannerLogo.setAttribute('alt', 'Marca registrada Verdunova');
     }
 
     openNavbar() {
@@ -31,7 +32,8 @@ export class NavbarController extends Controller {
         this.copyright = div(this.mobileMenu, { className: 'copyright' });
         this.brand = img(this.copyright, { className: 'brand' });
         this.copyText = p(this.copyright, { className: 'copyText' });
-        this.brand.src = '../assets/images/Verdunova.png';
+        this.brand.src = '../assets/images/Verdunova.webp';
+        this.brand.setAttribute('alt', 'Marca registrada Verdunova');
         this.copyText.textContent = 'Copyright 2024. All rights reserved';
 
         this.options = ['Inicio', 'Verduras', 'Frutas', 'Entregas'];
