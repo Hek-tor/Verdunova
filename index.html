@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>VERDUNOVA</title>
         <meta name="theme-color" content="#114B5F">
@@ -19,8 +19,14 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/userPageController.css">
-        <link rel="stylesheet" href="css/navbarController.css">
-        <link rel="stylesheet" href="css/itemsController.css">
+        <link rel="preload" href="css/navbarController.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="css/navbarController.css">
+        </noscript>
+        <link rel="preload" href="css/itemsController.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="css/itemsController.css">
+        </noscript>
     </head>
 
     <body>
