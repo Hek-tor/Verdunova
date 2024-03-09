@@ -12,6 +12,7 @@ export class ItemsController extends Controller {
     }
 
     receiveProducts(itemList) {
-        console.log(itemList);
+        this.itemList = itemList;
+        this.view.showProductsUI(this.itemList);
     }
 }

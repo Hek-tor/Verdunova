@@ -63,6 +63,14 @@
     margin: 0 auto;
 }
 
+.title {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.6em;
+    padding: 0.8em 0.8em;
+}
+
 @media (width <=420px) {
     .hero {
         padding: 20px;

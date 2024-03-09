@@ -26,6 +26,8 @@ export class UserPageView extends ViewForController {
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Elige';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Ordena';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Recibe';
+
+        this.title = p(this.container, { className: 'title' }).textContent = 'Lista de productos:';
     }
     createBenefitIcon(src, alt, parentElement) {
         const benefitIcon = document.createElement('img');
