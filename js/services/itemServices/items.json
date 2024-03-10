@@ -2,266 +2,266 @@
     "products": [
         {
             "id": 1,
-            "image": "",
+            "imageURL": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "name": "Aguacate",
             "price": "585",
             "details": "Unidad"
         },
         {
             "id": 2,
-            "image": "",
+            "imageURL": "",
             "name": "Apio verde",
             "price": "1.145",
             "details": "Mata"
         },
         {
             "id": 3,
-            "image": "",
+            "imageURL": "",
             "name": "Ayote Sazón",
             "price": "600",
             "details": "Kilo"
         },
         {
             "id": 4,
-            "image": "",
+            "imageURL": "",
             "name": "Banano maduro",
             "price": "30",
             "details": "Unidad"
         },
         {
             "id": 5,
-            "image": "",
+            "imageURL": "",
             "name": "Brócoli",
             "price": "1300",
             "details": "Kilo"
         },
         {
             "id": 6,
-            "image": "",
+            "imageURL": "",
             "name": "Camote",
             "price": "840",
             "details": "Kilo"
         },
         {
             "id": 7,
-            "image": "",
+            "imageURL": "",
             "name": "Cebolla amarilla",
             "price": "925",
             "details": "Kilo"
         },
         {
             "id": 8,
-            "image": "",
+            "imageURL": "",
             "name": "Chayote tierno",
             "price": "1000",
             "details": "Kilo"
         },
         {
             "id": 9,
-            "image": "",
+            "imageURL": "",
             "name": "Chile dulce",
             "price": "400",
             "details": "Kilo"
         },
         {
             "id": 10,
-            "image": "",
+            "imageURL": "",
             "name": "Coliflor",
             "price": "1.300",
             "details": "Unidad"
         },
         {
             "id": 11,
-            "image": "",
+            "imageURL": "",
             "name": "Culantro",
             "price": "1.200",
             "details": "Rollo"
         },
         {
             "id": 12,
-            "image": "",
+            "imageURL": "",
             "name": "Elote",
             "price": "185",
             "details": "Unidad"
         },
         {
             "id": 13,
-            "image": "",
+            "imageURL": "",
             "name": "Jengibre",
             "price": "1.200",
             "details": "Kilo"
         },
         {
             "id": 14,
-            "image": "",
+            "imageURL": "",
             "name": "Lechuga",
             "price": "230",
             "details": "Unidad"
         },
         {
             "id": 15,
-            "image": "",
+            "imageURL": "",
             "name": "Limón mandarina",
             "price": "145",
             "details": "Unidad"
         },
         {
             "id": 16,
-            "image": "",
+            "imageURL": "",
             "name": "Limón mesino",
             "price": "200",
             "details": "Unidad"
         },
         {
             "id": 17,
-            "image": "",
+            "imageURL": "",
             "name": "Mandarina",
             "price": "150",
             "details": "Unidad"
         },
         {
             "id": 18,
-            "image": "",
+            "imageURL": "",
             "name": "Manga Cavallini",
             "price": "2.000",
             "details": "Kilo"
         },
         {
             "id": 19,
-            "image": "",
+            "imageURL": "",
             "name": "Manga Haden",
             "price": "2.000",
             "details": "Kilo"
         },
         {
             "id": 20,
-            "image": "",
+            "imageURL": "",
             "name": "Melón",
             "price": "350",
             "details": "Kilo"
         },
         {
             "id": 21,
-            "image": "",
+            "imageURL": "",
             "name": "Naranja",
             "price": "95",
             "details": "Unidad"
         },
         {
             "id": 22,
-            "image": "",
+            "imageURL": "",
             "name": "Ñampi",
             "price": "790",
             "details": "Kilo"
         },
         {
             "id": 23,
-            "image": "",
+            "imageURL": "",
             "name": "Papa",
             "price": "800",
             "details": "Kilo"
         },
         {
             "id": 24,
-            "image": "",
+            "imageURL": "",
             "name": "Pepino",
             "price": "480",
             "details": "Kilo"
         },
         {
             "id": 25,
-            "image": "",
+            "imageURL": "",
             "name": "Piña pequeña",
             "price": "480",
             "details": "Unidad"
         },
         {
             "id": 26,
-            "image": "",
+            "imageURL": "",
             "name": "Piña Grande",
             "price": "914",
             "details": "Unidad"
         },
         {
             "id": 27,
-            "image": "",
+            "imageURL": "",
             "name": "Plátano maduro",
             "price": "170",
             "details": "Unidad"
         },
         {
             "id": 28,
-            "image": "",
+            "imageURL": "",
             "name": "Plátano verde",
             "price": "180",
             "details": "Unidad"
         },
         {
             "id": 29,
-            "image": "",
+            "imageURL": "",
             "name": "Remolacha",
             "price": "400",
             "details": "Unidad"
         },
         {
             "id": 30,
-            "image": "",
+            "imageURL": "",
             "name": "Repollo morado",
             "price": "1.400",
             "details": "Kilo"
         },
         {
             "id": 31,
-            "image": "",
+            "imageURL": "",
             "name": "Repollo verde",
             "price": "750",
             "details": "Kilo"
         },
         {
             "id": 32,
-            "image": "",
+            "imageURL": "",
             "name": "Sandía grande",
             "price": "400",
             "details": "Kilo"
         },
         {
             "id": 33,
-            "image": "",
+            "imageURL": "",
             "name": "Sandía mediana",
             "price": "280",
             "details": "Kilo"
         },
         {
             "id": 34,
-            "image": "",
+            "imageURL": "",
             "name": "Tiquisque",
             "price": "1.270",
             "details": "Kilo"
         },
         {
             "id": 35,
-            "image": "",
+            "imageURL": "",
             "name": "Tomate",
             "price": "1.000",
             "details": "Kilo"
         },
         {
             "id": 36,
-            "image": "",
+            "imageURL": "",
             "name": "Vainica",
             "price": "1.150",
             "details": "Kilo"
         },
         {
             "id": 37,
-            "image": "",
+            "imageURL": "",
             "name": "Yuca",
             "price": "320",
             "details": "Kilo"
         },
         {
             "id": 38,
-            "image": "",
+            "imageURL": "",
             "name": "Zanahoria",
             "price": "360",
             "details": "Kilo"
