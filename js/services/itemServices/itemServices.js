@@ -7,7 +7,7 @@ export class ItemService extends Service {
     }
 
     getProducts() {
-        const url = './js/services/itemServices/items.json';
+        const url = './js/services/itemServices/products.json';
 
         fetch(url, {
             headers: {

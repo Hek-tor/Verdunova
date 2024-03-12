@@ -60,6 +60,13 @@ export class NavbarController extends Controller {
                 this.closeNavbar();
             }
         }.bind(this));
+
+        window.onscroll = function () {
+            let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scroll > 10) {
+                this.closeNavbar();
+            }
+        }.bind(this);
     }
 
     createMenuItem(tagName, parent) {

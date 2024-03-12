@@ -1,6 +1,5 @@
 import { ViewForController } from "../../views/viewForController.js";
 import { ProductView } from "../../views/productView/productView.js";
-import { p } from "../../libraries/html.js";
 
 
 export class ItemsView extends ViewForController {
