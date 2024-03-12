@@ -21,7 +21,7 @@ export class ProductView {
     createLabel(name, price, details) {
         this.label = div(this.parent, { className: 'productLabel' });
         this.showName = p(this.label, { className: 'productName' }).textContent = name;
-        this.showPrice = p(this.label, { className: 'productPrice' }).textContent = `Precio: ₡ ${price}`;
+        this.showPrice = p(this.label, { className: 'productPrice' }).textContent = `₡ ${price}`;
         this.showDetails = details;
     }
 }
