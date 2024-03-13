@@ -8,11 +8,16 @@ export class ItemsController extends Controller {
         this.service = new ItemService(this);
         this.service.getProducts();
         this.view = new ItemsView(this, parent);
+        this.view.parent.addEventListener('productSelected', this.productSelected.bind(this));
         this.view.container.className = 'itemsController';
     }
 
     receiveProducts(itemList) {
         this.itemList = itemList;
         this.view.showProductsUI(this.itemList);
+    }
+
+    productSelected(event) {
+        //Producto seleccionado;
     }
 }

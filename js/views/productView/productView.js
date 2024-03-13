@@ -4,6 +4,7 @@ export class ProductView {
     constructor(parent, product) {
         this.parent = div(parent, { className: 'productView' });
         this.product = product;
+        this.parent.onclick = this.productSelected.bind(this);
         this.createImage(product.imageURL, `Producto: ${product.name}`);
         this.createLabel(product.name, product.price, product.details);
     }
@@ -23,5 +24,13 @@ export class ProductView {
         this.showName = p(this.label, { className: 'productName' }).textContent = name;
         this.showPrice = p(this.label, { className: 'productPrice' }).textContent = `₡ ${price}`;
         this.showDetails = details;
+    }
+
+    productSelected() {
+        const productSelectedEvent = new CustomEvent("productSelected", {
+            bubbles: true,
+            detail: { ProductView: this },
+        });
+        this.parent.dispatchEvent(productSelectedEvent);
     }
 }
