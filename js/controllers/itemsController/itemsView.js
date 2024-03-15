@@ -13,4 +13,9 @@ export class ItemsView extends ViewForController {
             const productView = new ProductView(this.container, product)
         });
     }
+
+    showProductSelected(event) {
+        let productSelected = event.detail.ProductView.product;
+
+    }
 }

@@ -18,6 +18,6 @@ export class ItemsController extends Controller {
     }
 
     productSelected(event) {
-        //Producto seleccionado;
+        this.view.showProductSelected(event);
     }
 }
