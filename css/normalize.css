@@ -20,8 +20,6 @@ figure {
     max-width: 100%;
     width: 100%;
     display: block;
-    -o-object-fit: cover;
-    object-fit: cover;
     -o-object-position: center center;
     object-position: center center;
 }
@@ -126,4 +124,9 @@ svg {
     width: 100%;
     display: block;
     fill: currentColor;
+}
+
+div:where(.swal2-container) .swal2-html-container,
+div:where(.swal2-container) div:where(.swal2-actions) {
+    margin: 0 !important;
 }
