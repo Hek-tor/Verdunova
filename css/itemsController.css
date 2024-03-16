@@ -51,14 +51,15 @@
 }
 
 .inputModal {
+    display: flex;
+    justify-content: center;
     text-align: center;
     border: 1px solid var(--primary-color);
     margin-top: 35px;
 }
 
 .inputModal:focus {
-    border: var(--primary-color);
-    padding: 0;
+    border: 1px solid var(--primary-color);
 }
 
 .modalImage {

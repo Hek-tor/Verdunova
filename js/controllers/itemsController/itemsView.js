@@ -26,8 +26,18 @@ export class ItemsView extends ViewForController {
             confirmButtonColor: "#298779",
             confirmButtonText: "Agregar",
             showCloseButton: true,
-            input: "text",
-            inputPlaceholder: "Ejemplo: 1 kilo pero pequeños",
+            input: "select",
+            inputPlaceholder: `Elija la cantidad`,
+            inputOptions: {
+                Cantidad: {
+                    medioKilo: "1/2 kilo",
+                    unKilo: "Un kilo",
+                    kiloMedio: "Kilo 1/2",
+                    dosKilos: "Dos kilos",
+                    dosKilosMedio: "Dos kilos 1/2",
+                    otra: "Otra cantidad"
+                },
+            },
             customClass: {
                 popup: 'productModal',
                 input: 'inputModal',
