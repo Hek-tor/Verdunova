@@ -22,7 +22,6 @@ export class FooterView extends ViewForController {
     }
 
     sendMessage() {
-        const messageURL = 'https://walink.co/3b5c02';
-        window.open(messageURL);
+        this.controller.messageController();
     }
 }

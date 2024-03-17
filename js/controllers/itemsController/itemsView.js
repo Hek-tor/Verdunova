@@ -14,7 +14,8 @@ export class ItemsView extends ViewForController {
         });
     }
 
-    showProductSelected(event) {
+    async showProductSelected(event) {
+        // const { value: select } = await
         let product = event.detail.ProductView.product;
         Swal.fire({
             title: `¿Agregar ${(product.name).toLowerCase()}?`,
@@ -30,11 +31,12 @@ export class ItemsView extends ViewForController {
             inputPlaceholder: `Elija la cantidad`,
             inputOptions: {
                 Cantidad: {
-                    medioKilo: "1/2 kilo",
-                    unKilo: "Un kilo",
-                    kiloMedio: "Kilo 1/2",
-                    dosKilos: "Dos kilos",
-                    dosKilosMedio: "Dos kilos 1/2",
+                    0.5: "1/2 kilo",
+                    1: "Un kilo",
+                    1.5: "Kilo 1/2",
+                    2: "Dos kilos",
+                    2.5: "Dos kilos 1/2",
+                    3: "Tres kilos",
                     otra: "Otra cantidad"
                 },
             },
@@ -54,9 +56,10 @@ export class ItemsView extends ViewForController {
             },
         }).then((result) => {
             if (result.isConfirmed) {
-                //Usuario agrego algo
+                let newProduct = JSON.stringify(product);
+                this.controller.addProduct(newProduct);
             }
-        });
+        })
     }
 }
 

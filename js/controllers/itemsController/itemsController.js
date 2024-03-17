@@ -13,11 +13,14 @@ export class ItemsController extends Controller {
     }
 
     receiveProducts(itemList) {
-        this.itemList = itemList;
-        this.view.showProductsUI(this.itemList);
+        this.view.showProductsUI(itemList);
     }
 
     productSelected(event) {
         this.view.showProductSelected(event);
+    }
+
+    addProduct(productAdded) {
+        console.log(`El usuario agrego al carrito: ${productAdded}`);
     }
 }
