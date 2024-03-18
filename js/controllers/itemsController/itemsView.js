@@ -15,9 +15,8 @@ export class ItemsView extends ViewForController {
     }
 
     async showProductSelected(event) {
-        // const { value: select } = await
         let product = event.detail.ProductView.product;
-        Swal.fire({
+        let result = await Swal.fire({
             title: `¿Agregar ${(product.name).toLowerCase()}?`,
             imageUrl: `${product.imageURL}`,
             imageWidth: 320,
@@ -28,17 +27,15 @@ export class ItemsView extends ViewForController {
             confirmButtonText: "Agregar",
             showCloseButton: true,
             input: "select",
-            inputPlaceholder: `Elija la cantidad`,
+            inputPlaceholder: `Ingrese la cantidad  &#8675`,
             inputOptions: {
-                Cantidad: {
-                    0.5: "1/2 kilo",
-                    1: "Un kilo",
-                    1.5: "Kilo 1/2",
-                    2: "Dos kilos",
-                    2.5: "Dos kilos 1/2",
-                    3: "Tres kilos",
-                    otra: "Otra cantidad"
-                },
+                0.5: "1/2 kilo",
+                1: "Un kilo",
+                1.5: "Kilo 1/2",
+                2: "Dos kilos",
+                2.5: "Dos kilos 1/2",
+                3: "Tres kilos",
+                otra: "Otra cantidad"
             },
             customClass: {
                 popup: 'productModal',
@@ -51,15 +48,32 @@ export class ItemsView extends ViewForController {
             showClass: {
                 popup: `animate__animated animate__fadeInDown animate__faster`
             },
-            hideClass: {
-                popup: `animate__animated animate__bounceOut animate__faster`
-            },
         }).then((result) => {
             if (result.isConfirmed) {
-                let newProduct = JSON.stringify(product);
-                this.controller.addProduct(newProduct);
-            }
-        })
-    }
+                let chosenProductQuantity = result.value;
+                this.sendProduct(product, chosenProductQuantity);
+            };
+        });
+    };
+
+    sendProduct(productSelected, quantity) {
+        if (quantity !== '' && quantity !== undefined) {
+            Swal.fire({
+                icon: "success",
+                showConfirmButton: false,
+                timer: 2000,
+                title: `${productSelected.name} fue agregado al carrito.`,
+                text: 'Ahí podrás confirmar y hacer tus pedidos.',
+                customClass: { popup: 'productModal', title: 'modalTittle' },
+                showClass: {
+                    popup: `animate__animated animate__pulse animate__faster`
+                },
+                hideClass: {
+                    popup: `animate__animated animate__bounceOut animate__faster`
+                },
+            });
+            this.controller.addProduct(productSelected, quantity);
+        };
+    };
 }
 

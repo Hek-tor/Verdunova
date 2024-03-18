@@ -20,7 +20,7 @@ export class ItemsController extends Controller {
         this.view.showProductSelected(event);
     }
 
-    addProduct(productAdded) {
-        console.log(`El usuario agrego al carrito: ${productAdded}`);
+    addProduct(productAdded, quantity) {
+        console.log(`Selecciono el producto: ${productAdded.name} con una cantidad de ${quantity} kilos`);
     }
 }
