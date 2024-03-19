@@ -130,3 +130,10 @@ div:where(.swal2-container) .swal2-html-container,
 div:where(.swal2-container) div:where(.swal2-actions) {
     margin: 0 !important;
 }
+
+div:where(.swal2-container) button:where(.swal2-close) {
+    right: 25px !important;
+    left: 70px !important;
+    top: -20px !important;
+    justify-content: flex-end !important;
+}

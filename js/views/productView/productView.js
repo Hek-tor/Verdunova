@@ -12,6 +12,7 @@ export class ProductView {
     createImage(src, alt) {
         const img = document.createElement('img');
         img.setAttribute('src', src);
+        img.setAttribute('loading', 'lazy');
         img.setAttribute('alt', alt);
         img.className = 'productImage';
         this.imageContainer = div(this.parent, { className: 'imageContainer' });

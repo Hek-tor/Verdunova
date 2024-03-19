@@ -2,49 +2,49 @@
     "products": [
         {
             "id": 1,
-            "imageURL": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "imageURL": "https://i.ibb.co/Czy0rvT/avocado-2644150-640.webp",
             "name": "Aguacate",
             "price": "585",
             "details": "unidad"
         },
         {
             "id": 2,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/LN9F2ds/vegetable-2085017-640.webp",
             "name": "Apio verde",
             "price": "1.145",
             "details": "mata"
         },
         {
             "id": 3,
-            "imageURL": "https://ibb.co/GWh6qz7",
+            "imageURL": "",
             "name": "Ayote Sazón",
             "price": "600",
             "details": "kilo"
         },
         {
             "id": 4,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/DQJmr4s/banana-1949166-640.webp",
             "name": "Banano maduro",
             "price": "30",
             "details": "unidad"
         },
         {
             "id": 5,
-            "imageURL": "https://i.ibb.co/X7wQqcX/20154.jpg",
+            "imageURL": "https://i.ibb.co/nsH0RL6/broccoli-1238250-640.webp",
             "name": "Brócoli",
             "price": "1300",
             "details": "kilo"
         },
         {
             "id": 6,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/HNyPskb/sweet-potato-1248078-640.webp",
             "name": "Camote",
             "price": "840",
             "details": "kilo"
         },
         {
             "id": 7,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/64mpdHW/onions-1397037-640.webp",
             "name": "Cebolla amarilla",
             "price": "925",
             "details": "kilo"
@@ -58,210 +58,196 @@
         },
         {
             "id": 9,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/r3G5jbR/paprika-687440-640.webp",
             "name": "Chile dulce",
             "price": "400",
             "details": "kilo"
         },
         {
             "id": 10,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/R65s1SV/cauliflower-4147118-640.webp",
             "name": "Coliflor",
             "price": "1.300",
             "details": "unidad"
         },
         {
             "id": 11,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/GnFpfMN/culantro-138844.webp",
             "name": "Culantro",
             "price": "1.200",
             "details": "rollo"
         },
         {
             "id": 12,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/nBwRQ8K/corn-4699903-640.webp",
             "name": "Elote",
             "price": "185",
             "details": "unidad"
         },
         {
             "id": 13,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/zHwKNDP/ginger-5108742-640.webp",
             "name": "Jengibre",
             "price": "1.200",
             "details": "kilo"
         },
         {
             "id": 14,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/bQxLzdG/lettuce-3480650-640.webp",
             "name": "Lechuga",
             "price": "230",
             "details": "unidad"
         },
         {
             "id": 15,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/KjHCyZd/lime-mandarina.webp",
             "name": "Limón mandarina",
             "price": "145",
             "details": "unidad"
         },
         {
             "id": 16,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/w7FXPF1/limon-Mesino-fruits-3923482-640.webp",
             "name": "Limón mesino",
             "price": "200",
             "details": "unidad"
         },
         {
             "id": 17,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/fQfbVWx/naranja-10037512.webp",
             "name": "Mandarina",
             "price": "150",
             "details": "unidad"
         },
         {
             "id": 18,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/CtBmYrQ/mango2363345.webp",
             "name": "Manga Cavallini",
             "price": "2.000",
             "details": "kilo"
         },
         {
             "id": 19,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/mBXrwt1/mango-Haden-5640033.webp",
             "name": "Manga Haden",
             "price": "2.000",
             "details": "kilo"
         },
         {
             "id": 20,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/zXB5c1b/melon-626351-640.webp",
             "name": "Melón",
             "price": "350",
             "details": "kilo"
         },
         {
             "id": 21,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/p2V16G2/oranges-15047-640.webp",
             "name": "Naranja",
             "price": "95",
             "details": "unidad"
         },
         {
             "id": 22,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/JtjwMD4/nampi-5367857-640.webp",
             "name": "Ñampi",
             "price": "790",
             "details": "kilo"
         },
         {
             "id": 23,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/Wk2LQ7g/potatoes-411975-640.webp",
             "name": "Papa",
             "price": "800",
             "details": "kilo"
         },
         {
             "id": 24,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/XYHPdkX/cucumbers-849269-640.webp",
             "name": "Pepino",
             "price": "480",
             "details": "kilo"
         },
         {
             "id": 25,
-            "imageURL": "",
-            "name": "Piña pequeña",
+            "imageURL": "https://i.ibb.co/VBXTbtc/pineapple-3413953-640.webp",
+            "name": "Piña",
             "price": "480",
             "details": "unidad"
         },
         {
             "id": 26,
-            "imageURL": "",
-            "name": "Piña Grande",
-            "price": "914",
-            "details": "unidad"
-        },
-        {
-            "id": 27,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/T1f9kby/platano-Maduro-3024866.webp",
             "name": "Plátano maduro",
             "price": "170",
             "details": "unidad"
         },
         {
-            "id": 28,
-            "imageURL": "",
+            "id": 27,
+            "imageURL": "https://i.ibb.co/RPz2Hvc/platano-3024866.webp",
             "name": "Plátano verde",
             "price": "180",
             "details": "unidad"
         },
         {
-            "id": 29,
-            "imageURL": "",
+            "id": 28,
+            "imageURL": "https://i.ibb.co/YPHYtdh/red-beets-1725799-640.webp",
             "name": "Remolacha",
             "price": "400",
             "details": "unidad"
         },
         {
-            "id": 30,
-            "imageURL": "",
+            "id": 29,
+            "imageURL": "https://i.ibb.co/1XWFw5X/repollo-Morado-4276765-640.webp",
             "name": "Repollo morado",
             "price": "1.400",
             "details": "kilo"
         },
         {
-            "id": 31,
-            "imageURL": "",
+            "id": 30,
+            "imageURL": "https://i.ibb.co/X5CrT4k/repollowhite-4276765-640.webp",
             "name": "Repollo verde",
             "price": "750",
             "details": "kilo"
         },
         {
-            "id": 32,
-            "imageURL": "",
-            "name": "Sandía grande",
+            "id": 31,
+            "imageURL": "https://i.ibb.co/vBLDsBd/watermelon-2409368-640.webp",
+            "name": "Sandía",
             "price": "400",
             "details": "kilo"
         },
         {
-            "id": 33,
-            "imageURL": "",
-            "name": "Sandía mediana",
-            "price": "280",
-            "details": "kilo"
-        },
-        {
-            "id": 34,
+            "id": 32,
             "imageURL": "",
             "name": "Tiquisque",
             "price": "1.270",
             "details": "kilo"
         },
         {
-            "id": 35,
-            "imageURL": "",
+            "id": 33,
+            "imageURL": "https://i.ibb.co/X5Rvzgh/tomatoe-1327838.webp",
             "name": "Tomate",
             "price": "1.000",
             "details": "kilo"
         },
         {
-            "id": 36,
+            "id": 34,
             "imageURL": "",
             "name": "Vainica",
             "price": "1.150",
             "details": "kilo"
         },
         {
-            "id": 37,
-            "imageURL": "",
+            "id": 35,
+            "imageURL": "https://i.ibb.co/rF32CnY/yuca-1353258-640.webp",
             "name": "Yuca",
             "price": "320",
             "details": "kilo"
         },
         {
-            "id": 38,
-            "imageURL": "",
+            "id": 36,
+            "imageURL": "https://i.ibb.co/Gttf0ct/carrots-1508847-640.webp",
             "name": "Zanahoria",
             "price": "360",
             "details": "kilo"
