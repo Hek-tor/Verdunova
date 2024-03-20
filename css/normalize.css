@@ -132,8 +132,7 @@ div:where(.swal2-container) div:where(.swal2-actions) {
 }
 
 div:where(.swal2-container) button:where(.swal2-close) {
-    right: 25px !important;
-    left: 70px !important;
+    right: 10px !important;
     top: -20px !important;
     justify-content: flex-end !important;
 }
