@@ -17,7 +17,7 @@ export class ItemService extends Service {
             response.json().then(data => {
                 let itemList = [];
                 data.products.forEach((item) => {
-                    let itemCard = new ItemCard(item.id, item.imageURL, item.name, item.price, item.details);
+                    let itemCard = new ItemCard(item.id, item.imageURL, item.name, item.price, item.category);
                     itemList.push(itemCard);
                 });
                 this.controller.receiveProducts(itemList);

@@ -6,7 +6,7 @@ export class ProductView {
         this.product = product;
         this.parent.onclick = this.productSelected.bind(this);
         this.createImage(product.imageURL, `Producto: ${product.name}`);
-        this.createLabel(product.name, product.price, product.details);
+        this.createLabel(product.name, product.price, product.category);
     }
 
     createImage(src, alt) {
@@ -20,11 +20,11 @@ export class ProductView {
         return this.imageContainer;
     }
 
-    createLabel(name, price, details) {
+    createLabel(name, price, category) {
         this.label = div(this.parent, { className: 'productLabel' });
         this.showName = p(this.label, { className: 'productName' }).textContent = name;
         this.showPrice = p(this.label, { className: 'productPrice' }).textContent = `₡ ${price}`;
-        this.showDetails = details;
+        this.showDetails = category;
     }
 
     productSelected() {

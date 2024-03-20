@@ -14,8 +14,21 @@ export class ItemsView extends ViewForController {
         });
     }
 
-    async showProductSelected(event) {
+    showProductSelected(event) {
         let product = event.detail.ProductView.product;
+        switch (product.category) {
+            case 'kilo':
+                this.showCategoryKilo(product);
+                break;
+            case 'unidad':
+                this.showCategoryUnit(product);
+                break;
+            default:
+                break;
+        }
+    };
+
+    async showCategoryKilo(product) {
         let result = await Swal.fire({
             title: `¿Agregar ${(product.name).toLowerCase()}?`,
             imageUrl: `${product.imageURL}`,
@@ -27,6 +40,8 @@ export class ItemsView extends ViewForController {
             confirmButtonText: "Agregar",
             showCloseButton: true,
             input: "select",
+            allowEnterKey: true,
+            inputAutoFocus: false,
             inputPlaceholder: `Ingrese la cantidad  &#8675`,
             inputOptions: {
                 0.5: "1/2 kilo",
@@ -54,7 +69,41 @@ export class ItemsView extends ViewForController {
                 this.sendProduct(product, chosenProductQuantity);
             };
         });
-    };
+    }
+
+    async showCategoryUnit(product) {
+        let result = await Swal.fire({
+            title: `¿Agregar ${(product.name).toLowerCase()}?`,
+            imageUrl: `${product.imageURL}`,
+            imageWidth: 320,
+            imageHeight: 180,
+            imageAlt: `Producto: ${product.name}`,
+            showConfirmButton: true,
+            confirmButtonColor: "#298779",
+            confirmButtonText: "Agregar",
+            showCloseButton: true,
+            input: "number",
+            allowEnterKey: true,
+            inputPlaceholder: `Ingrese la cantidad`,
+            inputAutoFocus: false,
+            customClass: {
+                popup: 'productModal',
+                input: 'inputModal',
+                title: 'modalTittle',
+                image: 'modalImage',
+                closeButton: 'closeButtonModal',
+                confirmButton: 'confirmButtonModal',
+            },
+            showClass: {
+                popup: `animate__animated animate__fadeInDown animate__faster`
+            },
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let chosenProductQuantity = result.value;
+                this.sendProduct(product, chosenProductQuantity);
+            };
+        });
+    }
 
     sendProduct(productSelected, quantity) {
         if (quantity !== '' && quantity !== undefined) {
