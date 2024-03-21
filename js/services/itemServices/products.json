@@ -16,7 +16,7 @@
         },
         {
             "id": 3,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/fvWh7km/ayote-203.webp",
             "name": "Ayote tierno",
             "price": "600",
             "category": "unidad"
@@ -51,7 +51,7 @@
         },
         {
             "id": 8,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/qN2th4L/chayanote-90.webp",
             "name": "Chayote tierno",
             "price": "1000",
             "category": "kilo"
@@ -219,7 +219,7 @@
         },
         {
             "id": 32,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/27hXmHS/tiquisque-2938.webp",
             "name": "Tiquisque",
             "price": "1.270",
             "category": "kilo"
@@ -233,7 +233,7 @@
         },
         {
             "id": 34,
-            "imageURL": "",
+            "imageURL": "https://i.ibb.co/DKvL58m/vainica-90.webp",
             "name": "Vainica",
             "price": "1.150",
             "category": "kilo"
