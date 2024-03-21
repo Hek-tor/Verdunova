@@ -14,11 +14,7 @@ export class CartView extends ViewForController {
     activeButtonEvent() {
         window.onscroll = function () {
             let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-            if (scroll > 500) {
-                this.cartButton.style.display = "block";
-            } else {
-                this.cartButton.style.display = "none";
-            }
+            this.cartButton.style.display = scroll > 500 ? "block" : "none";
         }.bind(this);
     }
 
