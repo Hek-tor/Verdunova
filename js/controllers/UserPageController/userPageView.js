@@ -5,14 +5,11 @@ export class UserPageView extends ViewForController {
     constructor(controller, parent) {
         super(controller, parent);
         this.container.className = 'userPageController';
-
         this.hero = div(this.container, { className: 'hero' });
         this.hero.innerHTML = `<h1>Entregas a domicilio de frutas y verduras frescas en Turrialba y Cartago.</h1>`;
         this.hero.setAttribute('alt', 'Banner principal con productos frescos.');
-
         this.benefits = div(this.container, { className: 'benefits' });
         this.benefits.innerHTML = '<p>Haga su pedido y reciba cada semana.</p>';
-
         this.callToActions = div(this.container, { className: 'callToActions' });
         this.ctaOne = div(this.callToActions, { className: 'benefitOption' });
         this.ctaTwo = div(this.callToActions, { className: 'benefitOption' });
@@ -26,9 +23,9 @@ export class UserPageView extends ViewForController {
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Elige';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Ordena';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Recibe';
-
         this.title = p(this.container, { className: 'title' }).textContent = 'Lista de productos:';
     }
+
     createBenefitIcon(src, alt, parentElement) {
         const benefitIcon = document.createElement('img');
         benefitIcon.setAttribute('src', src);
