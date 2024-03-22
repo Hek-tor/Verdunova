@@ -22,10 +22,12 @@ export class NavbarController extends Controller {
         if (this.mobileMenu && this.mobileMenu.parentNode) {
             this.mobileMenu.parentNode.removeChild(this.mobileMenu);
             this.mobileMenu.classList.remove('nav');
+            document.body.style.overflowY = "scroll";
         }
     }
 
     createMobileMenu() {
+        document.body.style.overflowY = "hidden";
         this.mobileMenu = div(this.view.container, { className: 'nav' });
         this.menuList = ul(this.mobileMenu, { className: 'navList' });
         this.closeButton = div(this.menuList, { className: 'closeMenu', onclick: this.closeNavbar.bind(this) });
@@ -60,13 +62,6 @@ export class NavbarController extends Controller {
                 this.closeNavbar();
             }
         }.bind(this));
-
-        window.onscroll = function () {
-            let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-            if (scroll > 10) {
-                this.closeNavbar();
-            }
-        }.bind(this);
     }
 
     createMenuItem(tagName, parent) {
