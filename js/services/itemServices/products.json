@@ -114,21 +114,21 @@
         },
         {
             "id": 17,
-            "imageURL": "https://i.ibb.co/fQfbVWx/naranja-10037512.webp",
+            "imageURL": "https://i.ibb.co/Nmmcrfy/tangerines-1721590-640.webp",
             "name": "Mandarina",
             "price": "150",
-            "category": "unidad"
+            "category": "kilo"
         },
         {
             "id": 18,
-            "imageURL": "https://i.ibb.co/CtBmYrQ/mango2363345.webp",
+            "imageURL": "https://i.ibb.co/ncfQdn0/mango-cavilliini-640.webp",
             "name": "Manga Cavallini",
             "price": "2.000",
             "category": "kilo"
         },
         {
             "id": 19,
-            "imageURL": "https://i.ibb.co/mBXrwt1/mango-Haden-5640033.webp",
+            "imageURL": "https://i.ibb.co/fG74tn3/haden-1239241-640.webp",
             "name": "Manga Haden",
             "price": "2.000",
             "category": "kilo"
@@ -138,11 +138,11 @@
             "imageURL": "https://i.ibb.co/zXB5c1b/melon-626351-640.webp",
             "name": "Melón",
             "price": "350",
-            "category": "kilo"
+            "category": "unidad"
         },
         {
             "id": 21,
-            "imageURL": "https://i.ibb.co/p2V16G2/oranges-15047-640.webp",
+            "imageURL": "https://i.ibb.co/0FhpM76/orange-3417067-640.webp",
             "name": "Naranja",
             "price": "95",
             "category": "unidad"
@@ -201,14 +201,14 @@
             "imageURL": "https://i.ibb.co/1XWFw5X/repollo-Morado-4276765-640.webp",
             "name": "Repollo morado",
             "price": "1.400",
-            "category": "kilo"
+            "category": "unidad"
         },
         {
             "id": 30,
             "imageURL": "https://i.ibb.co/X5CrT4k/repollowhite-4276765-640.webp",
             "name": "Repollo verde",
             "price": "750",
-            "category": "kilo"
+            "category": "unidad"
         },
         {
             "id": 31,
@@ -226,7 +226,7 @@
         },
         {
             "id": 33,
-            "imageURL": "https://i.ibb.co/X5Rvzgh/tomatoe-1327838.webp",
+            "imageURL": "https://i.ibb.co/j4pPgJy/tomatoes-7433786-640.webp",
             "name": "Tomate",
             "price": "1.000",
             "category": "kilo"
