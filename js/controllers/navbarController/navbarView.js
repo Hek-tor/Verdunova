@@ -21,7 +21,6 @@ export class NavbarView extends ViewForController {
     }
 
     createMobileMenu() {
-        document.body.style.overflowY = "hidden";
         this.mobileMenu = div(this.container, { className: 'nav' });
         this.menuList = ul(this.mobileMenu, { className: 'navList' });
         this.closeButton = div(this.menuList, { className: 'closeMenu', onclick: this.closeBtn.bind(this) });
@@ -42,7 +41,7 @@ export class NavbarView extends ViewForController {
         this.options.forEach((option, index) => {
             const li = this.createMenuItem('li', this.menuList);
             const img = this.createImage(this.icons[index], 'Icono');
-            let link = this.createLink(`#${option}`, option);
+            const link = this.createLink(`#${option}`, option);
             li.appendChild(img);
             li.appendChild(link);
         })

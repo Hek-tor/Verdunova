@@ -16,7 +16,6 @@ export class NavbarController extends Controller {
         if (this.view.mobileMenu && this.view.mobileMenu.parentNode) {
             this.view.mobileMenu.parentNode.removeChild(this.view.mobileMenu);
             this.view.mobileMenu.classList.remove('nav');
-            document.body.style.overflowY = "scroll";
         }
     }
 
