@@ -10,6 +10,7 @@ export class ItemsController extends Controller {
         this.view = new ItemsView(this, parent);
         this.view.parent.addEventListener('productSelected', this.productSelected.bind(this));
         this.view.container.className = 'itemsController';
+        this.view.container.id = 'Verduras';
     }
 
     receiveProducts(itemList) {

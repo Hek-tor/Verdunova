@@ -5,6 +5,7 @@ export class UserPageView extends ViewForController {
     constructor(controller, parent) {
         super(controller, parent);
         this.container.className = 'userPageController';
+        this.container.id = 'Inicio';
         this.hero = div(this.container, { className: 'hero' });
         this.hero.innerHTML = `<h1>Entregas a domicilio de frutas y verduras frescas en Turrialba y Cartago.</h1>`;
         this.hero.setAttribute('alt', 'Banner principal con productos frescos.');

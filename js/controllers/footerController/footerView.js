@@ -5,6 +5,7 @@ export class FooterView extends ViewForController {
     constructor(controller, parent) {
         super(controller, parent);
         this.container.className = 'footerContent';
+        this.container.id = 'Entregas';
         this.delivery = h3(this.container, { className: 'titleSection' }).textContent = 'Entregas';
         this.line = div(this.container, { className: 'lineDecoration' });
 
