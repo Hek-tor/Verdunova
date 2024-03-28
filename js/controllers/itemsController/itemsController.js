@@ -22,7 +22,7 @@ export class ItemsController extends Controller {
     }
 
     addProduct(productAdded, quantity) {
-        console.log(`Selecciono el producto: ${productAdded.name} con una cantidad de ${quantity} kilos`);
-        console.log(`El costo es de ${productAdded.price * quantity} colones`);
+        let purchaseCost = productAdded.price * quantity;
+        //local Storage
     }
 }

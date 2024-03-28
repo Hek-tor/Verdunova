@@ -10,11 +10,14 @@
     --other-color: #C6DABF;
     --navbar-color: #f5f1e4;
     --subElements-color: #298779;
+    --body-color: #ffffffff;
     --fade-color: #000000bf;
     --navbar-height: 70px;
 }
 
 body {
+    overflow-x: hidden;
+    background-color: var(--body-color);
     min-height: 100vh;
     font-size: 100%;
 }

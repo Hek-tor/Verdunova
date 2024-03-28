@@ -98,7 +98,8 @@ export class ItemsView extends ViewForController {
                 popup: `animate__animated animate__fadeInDown animate__faster`
             },
         }).then((result) => {
-            if (result.isConfirmed) {
+            const limitQuantity = 12;
+            if (result.isConfirmed && result.value <= limitQuantity) {
                 let chosenProductQuantity = result.value;
                 this.sendProduct(product, chosenProductQuantity);
             };

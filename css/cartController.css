@@ -1,3 +1,7 @@
+.cartView {
+
+}
+
 .cartButton {
     display: none;
     background-color: var(--tertiary-color);
