@@ -25,5 +25,7 @@ export class CartView extends ViewForController {
         const showCart = new CartSectionView(itemsAdded);
     }
 
-    getItemsAdded = () => this.controller.itemsAdded();
+    getItemsAdded() {
+        return this.controller.itemsAdded();
+    }
 }

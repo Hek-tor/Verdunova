@@ -1,5 +1,5 @@
 export class CartSectionView {
-    constructor(productsAdded) {
-        alert(productsAdded);
+    constructor(itemsAdded) {
+        console.log(itemsAdded);
     }
 }

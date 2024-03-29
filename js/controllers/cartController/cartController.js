@@ -8,8 +8,6 @@ export class CartController extends Controller {
     }
 
     itemsAdded() {
-        //hacer get del local Storage
-        let list = ['verdura', 'chayote'];
-        return list;
+        return JSON.parse(localStorage.getItem('cart')) || [];
     }
 }

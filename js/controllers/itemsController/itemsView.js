@@ -65,8 +65,12 @@ export class ItemsView extends ViewForController {
             },
         }).then((result) => {
             if (result.isConfirmed) {
-                let chosenProductQuantity = result.value;
-                this.sendProduct(product, chosenProductQuantity);
+                let productQuantity = result.value;
+                let name = product.name;
+                let image = product.imageURL;
+                let category = product.category;
+                let price = product.price;
+                this.sendProduct(name, price, category, productQuantity, image);
             };
         });
     }
@@ -98,21 +102,25 @@ export class ItemsView extends ViewForController {
                 popup: `animate__animated animate__fadeInDown animate__faster`
             },
         }).then((result) => {
-            const limitQuantity = 12;
+            const limitQuantity = 30;
             if (result.isConfirmed && result.value <= limitQuantity) {
-                let chosenProductQuantity = result.value;
-                this.sendProduct(product, chosenProductQuantity);
+                let productQuantity = result.value;
+                let name = product.name;
+                let price = product.price;
+                let category = product.category;
+                let image = product.imageURL;
+                this.sendProduct(name, price, category, productQuantity, image);
             };
         });
     }
 
-    sendProduct(productSelected, quantity) {
+    sendProduct(name, price, category, quantity, image) {
         if (quantity !== '' && quantity !== undefined) {
             Swal.fire({
                 icon: "success",
                 showConfirmButton: false,
                 timer: 2000,
-                title: `${productSelected.name} fue agregado al carrito.`,
+                title: `${name} fue agregado al carrito.`,
                 text: 'Ahí podrás confirmar y hacer tus pedidos.',
                 customClass: { popup: 'productModal', title: 'modalTittle' },
                 showClass: {
@@ -122,7 +130,7 @@ export class ItemsView extends ViewForController {
                     popup: `animate__animated animate__bounceOut animate__faster`
                 },
             });
-            this.controller.addProduct(productSelected, quantity);
+            this.controller.addProduct(name, price, category, quantity, image);
         };
     };
 }

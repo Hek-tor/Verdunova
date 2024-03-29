@@ -21,8 +21,19 @@ export class ItemsController extends Controller {
         this.view.showProductSelected(event);
     }
 
-    addProduct(productAdded, quantity) {
-        let purchaseCost = productAdded.price * quantity;
-        //local Storage
+    addProduct(name, price, category, quantity, image) {
+        let purchaseCost = price * quantity;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let newItem = {
+            item: {
+                name: name,
+                category: category,
+                image: image,
+                quantity: quantity,
+                purchaseCost: purchaseCost
+            }
+        };
+        cart.push(newItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 }
