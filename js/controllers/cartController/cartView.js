@@ -7,7 +7,7 @@ export class CartView extends ViewForController {
         this.container.className = 'cartContainer';
         this.cartButton = div(this.container, { className: 'cartButton', onclick: this.cartSection.bind(this) });
         this.iconButton = img(this.cartButton, { className: 'cartIcon' });
-        this.iconButton.src = '../assets/icons/cart.webp';
+        this.iconButton.src = '../assets/icons/cart-icon.svg';
         this.iconButton.setAttribute('alt', 'Botón para abrir el carrito de compras');
         this.activeButtonEvent();
     }
