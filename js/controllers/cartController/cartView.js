@@ -1,11 +1,12 @@
 import { ViewForController } from "../../views/viewForController.js";
 import { div, img } from "../../libraries/html.js";
+import { CartSectionView } from "../../views/cart/cartSectionView.js";
 
 export class CartView extends ViewForController {
     constructor(controller, parent) {
         super(controller, parent);
         this.container.className = 'cartContainer';
-        this.cartButton = div(this.container, { className: 'cartButton', onclick: this.cartSection.bind(this) });
+        this.cartButton = div(this.container, { className: 'cartButton', onclick: this.showCart.bind(this) });
         this.iconButton = img(this.cartButton, { className: 'cartIcon' });
         this.iconButton.src = '../assets/icons/cart-icon.svg';
         this.iconButton.setAttribute('alt', 'Botón para abrir el carrito de compras');
@@ -19,7 +20,10 @@ export class CartView extends ViewForController {
         }.bind(this);
     }
 
-    cartSection() {
-        this.cartSection = div(this.container, { className: 'cartView' });
+    showCart() {
+        let itemsAdded = this.getItemsAdded();
+        const showCart = new CartSectionView(itemsAdded);
     }
+
+    getItemsAdded = () => this.controller.itemsAdded();
 }

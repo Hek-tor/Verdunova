@@ -10,7 +10,7 @@ export class ItemsView extends ViewForController {
 
     showProductsUI(products) {
         products.forEach(product => {
-            const productView = new ProductView(this.container, product)
+            const productView = new ProductView(this.container, product);
         });
     }
 
