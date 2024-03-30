@@ -8,6 +8,7 @@ export class ItemsController extends Controller {
         this.service = new ItemService(this);
         this.service.getProducts();
         this.view = new ItemsView(this, parent);
+        this.cart = JSON.parse(localStorage.getItem('cart')) || [];
         this.view.parent.addEventListener('productSelected', this.productSelected.bind(this));
         this.view.container.className = 'itemsController';
         this.view.container.id = 'Verduras';
@@ -23,7 +24,6 @@ export class ItemsController extends Controller {
 
     addProduct(name, price, category, quantity, image) {
         let purchaseCost = price * quantity;
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let newItem = {
             item: {
                 name: name,
@@ -33,7 +33,7 @@ export class ItemsController extends Controller {
                 purchaseCost: purchaseCost
             }
         };
-        cart.push(newItem);
-        localStorage.setItem('cart', JSON.stringify(cart));
+        this.cart.push(newItem);
+        localStorage.setItem('cart', JSON.stringify(this.cart));
     }
 }

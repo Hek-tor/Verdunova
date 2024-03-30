@@ -1,5 +1,3 @@
-.cartView {}
-
 .cartButton {
     display: none;
     background-color: var(--fade-color);
@@ -22,6 +20,26 @@
 .cartIcon {
     width: 46px;
     transition: ease 1s;
+}
+
+.cartModal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartTittle {
+    text-align: start;
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+}
+
+.cartModalButton {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    bottom: 2em;
+    padding: 15px 60px 15px 60px;
+    background-color: var(--subElements-color);
 }
 
 @keyframes effect {
