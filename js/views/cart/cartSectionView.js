@@ -14,7 +14,8 @@ export class CartSectionView {
             this.modalMessage = p(this.content, { className: 'modalMessage' });
             this.iconForEmpty.src = '../../assets/icons/empty.webp';
             this.modalMessage.textContent = 'Aún no has agregado ningún producto.';
-            this.content.appendChild(this.iconForEmpty, this.modalMessage);
+            this.content.appendChild(this.modalMessage);
+            this.content.appendChild(this.iconForEmpty);
         }
         return this.content;
     }

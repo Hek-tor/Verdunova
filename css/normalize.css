@@ -141,5 +141,5 @@ div:where(.swal2-container) button:where(.swal2-close) {
 }
 
 .swal2-html-container {
-    height: 500px;
+    height: 600px;
 }

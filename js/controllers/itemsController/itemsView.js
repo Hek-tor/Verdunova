@@ -120,8 +120,7 @@ export class ItemsView extends ViewForController {
                 icon: "success",
                 showConfirmButton: false,
                 timer: 2000,
-                title: `${name} fue agregado al carrito.`,
-                text: 'Ahí podrás confirmar y hacer tus pedidos.',
+                title: `${quantity} ${category} de ${name} fue agregado al carrito.`,
                 customClass: { popup: 'productModal', title: 'modalTittle' },
                 showClass: {
                     popup: `animate__animated animate__pulse animate__faster`
