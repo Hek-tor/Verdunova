@@ -1,12 +1,29 @@
+import { img, p } from "../../libraries/html.js";
 export class CartSectionView {
     constructor(itemsAdded) {
-        this.showModal(itemsAdded);
+        let cartContent = this.displayItems(itemsAdded);
+        this.showModal(cartContent);
     }
 
-    showModal(itemsAdded) {
+    displayItems(items) {
+        const empty = 0;
+        this.content = document.createElement('div');
+        this.content.className = 'modalContent';
+        if (items.length === empty) {
+            this.iconForEmpty = img(this.content, { className: 'iconEmpty' });
+            this.modalMessage = p(this.content, { className: 'modalMessage' });
+            this.iconForEmpty.src = '../../assets/icons/empty.webp';
+            this.modalMessage.textContent = 'Aún no has agregado ningún producto.';
+            this.content.appendChild(this.iconForEmpty, this.modalMessage);
+        }
+        return this.content;
+    }
+
+    showModal(cartContent) {
         Swal.fire({
             title: `Lista de productos agregados`,
             grow: 'fullscreen',
+            html: cartContent,
             showConfirmButton: true,
             confirmButtonColor: "#298779",
             confirmButtonText: "Hacer pedido",
@@ -23,9 +40,9 @@ export class CartSectionView {
             hideClass: {
                 popup: `animate__animated animate__slideOutRight animate__faster`
             },
-        }).then(() => {
+        }).then((result) => {
             if (result.isConfirmed) {
-
+                localStorage.removeItem('cart');
             };
         });
     }

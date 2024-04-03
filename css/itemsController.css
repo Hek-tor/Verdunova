@@ -70,6 +70,7 @@
 }
 
 .closeButtonModal {
+    padding: 5px;
     position: absolute;
     color: var(--tertiary-color);
     font-size: 4.2em;
@@ -82,7 +83,6 @@
     padding: 12px 55px 12px 55px;
     color: var(--subElements-color);
 }
-
 
 @media screen and (min-width: 375px) and (max-width: 424px) {
     .imageContainer {

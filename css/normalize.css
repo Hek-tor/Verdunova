@@ -126,13 +126,20 @@ svg {
     fill: currentColor;
 }
 
+/*SweetAlert*/
+
 div:where(.swal2-container) .swal2-html-container,
 div:where(.swal2-container) div:where(.swal2-actions) {
     margin: 0 !important;
 }
 
 div:where(.swal2-container) button:where(.swal2-close) {
+    padding: 30px 10px 20px 20px !important;
     right: 10px !important;
     top: -20px !important;
     justify-content: flex-end !important;
+}
+
+.swal2-html-container {
+    height: 500px;
 }

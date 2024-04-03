@@ -23,23 +23,35 @@
 }
 
 .cartModal {
+    font-family: "Poppins", sans-serif;
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .cartTittle {
-    text-align: start;
-    font-family: "Poppins", sans-serif;
+    text-align: center;
     color: var(--primary-color);
 }
 
 .cartModalButton {
-    font-family: "Poppins", sans-serif;
     position: absolute;
     bottom: 2em;
     padding: 15px 60px 15px 60px;
     background-color: var(--subElements-color);
+}
+
+.modalContent {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalMessage {
+    padding: 2em;
+    margin-top: 3em;
 }
 
 @keyframes effect {
