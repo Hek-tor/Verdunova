@@ -16,15 +16,10 @@ export class ItemsView extends ViewForController {
 
     showProductSelected(event) {
         let product = event.detail.ProductView.product;
-        switch (product.category) {
-            case 'kilo':
-                this.showCategoryKilo(product);
-                break;
-            case 'unidad':
-                this.showCategoryUnit(product);
-                break;
-            default:
-                break;
+        if (product.category === 'kilo') {
+            this.showCategoryKilo(product);
+        } else if (product.category === 'unidad') {
+            this.showCategoryUnit(product);
         }
     };
 
@@ -50,7 +45,6 @@ export class ItemsView extends ViewForController {
                 2: "Dos kilos",
                 2.5: "Dos kilos 1/2",
                 3: "Tres kilos",
-                otra: "Otra cantidad"
             },
             customClass: {
                 popup: 'productModal',

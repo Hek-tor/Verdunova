@@ -16,6 +16,8 @@ export class CartSectionView {
             this.modalMessage.textContent = 'Aún no has agregado ningún producto.';
             this.content.appendChild(this.modalMessage);
             this.content.appendChild(this.iconForEmpty);
+        } else {
+            console.log(items);
         }
         return this.content;
     }
