@@ -15,7 +15,12 @@ export class CartSectionView {
     }
 
     processOrder() {
-        localStorage.removeItem('cart');
+        let totalPrice = this.finalPrice;
+        if (totalPrice > 0) {
+            //Producto: [cantidad, categoria, nombre] 5 kilos Aguacate, ect...
+            //Datos: [Cliente, ubicacion,numero,precio total] Carlos, Turrialba, 40404040, 16.000
+            localStorage.removeItem('cart');
+        }
     }
 
     showItemsContent(items) {
@@ -29,6 +34,7 @@ export class CartSectionView {
             this.name.textContent = `${item.quantity} ${item.category} de ${item.name}`;
             this.cost = p(itemLabel, { className: 'itemCost' }).textContent = `${item.purchaseCost} colones`;
             this.finalPrice += item.purchaseCost;
+            return itemDiv;
         });
     }
 
@@ -45,7 +51,8 @@ export class CartSectionView {
     showModal(cartContent) {
         Swal.fire({
             title: `Lista de productos agregados`,
-            grow: 'fullscreen',
+            position: 'center',
+            heightAuto: true,
             html: cartContent,
             showConfirmButton: true,
             confirmButtonColor: "#298779",

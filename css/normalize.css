@@ -143,3 +143,7 @@ div:where(.swal2-container) button:where(.swal2-close) {
 .swal2-html-container {
     height: 600px;
 }
+
+.swal2-container {
+    padding: 0 10px 0 10px;
+}
