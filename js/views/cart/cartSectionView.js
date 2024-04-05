@@ -1,24 +1,44 @@
-import { img, p } from "../../libraries/html.js";
+import { div, img, p } from "../../libraries/html.js";
+
 export class CartSectionView {
     constructor(itemsAdded) {
-        let cartContent = this.displayItems(itemsAdded);
+        this.content = document.createElement('div');
+        this.content.className = 'modalContent';
+        const cartContent = this.displayItems(itemsAdded);
         this.showModal(cartContent);
     }
 
     displayItems(items) {
-        const empty = 0;
-        this.content = document.createElement('div');
-        this.content.className = 'modalContent';
-        if (items.length === empty) {
-            this.iconForEmpty = img(this.content, { className: 'iconEmpty' });
-            this.modalMessage = p(this.content, { className: 'modalMessage' });
-            this.iconForEmpty.src = '../../assets/icons/empty.webp';
-            this.modalMessage.textContent = 'Aún no has agregado ningún producto.';
-            this.content.appendChild(this.modalMessage);
-            this.content.appendChild(this.iconForEmpty);
-        } else {
-            console.log(items);
-        }
+        const noItems = 0;
+        items.length === noItems ? this.showEmptyContent() : this.showItemsContent(items);
+        return this.content;
+    }
+
+    processOrder() {
+        localStorage.removeItem('cart');
+    }
+
+    showItemsContent(items) {
+        this.finalPrice = 0;
+        items.forEach(item => {
+            const itemDiv = div(this.content, { className: 'itemDiv' });
+            this.image = img(itemDiv, { className: 'imageCart' }).src = `${item.image}`;
+
+            const itemLabel = div(itemDiv, { className: 'itemLabel' });
+            this.name = p(itemLabel, { className: 'itemName' });
+            this.name.textContent = `${item.quantity} ${item.category} de ${item.name}`;
+            this.cost = p(itemLabel, { className: 'itemCost' }).textContent = `${item.purchaseCost} colones`;
+            this.finalPrice += item.purchaseCost;
+        });
+    }
+
+    showEmptyContent() {
+        this.iconForEmpty = img(this.content, { className: 'iconEmpty' });
+        this.modalMessage = p(this.content, { className: 'modalMessage' });
+        this.iconForEmpty.src = '../../assets/icons/empty.webp';
+        this.modalMessage.textContent = 'Aún no has agregado ningún producto.';
+        this.content.appendChild(this.modalMessage);
+        this.content.appendChild(this.iconForEmpty);
         return this.content;
     }
 
@@ -45,8 +65,8 @@ export class CartSectionView {
             },
         }).then((result) => {
             if (result.isConfirmed) {
-                localStorage.removeItem('cart');
-            };
+                this.processOrder();
+            }
         });
     }
 }

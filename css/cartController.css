@@ -31,27 +31,79 @@
 }
 
 .cartTittle {
+    text-wrap: wrap;
+    font-size: 1.5em;
     text-align: center;
     color: var(--primary-color);
 }
 
 .cartModalButton {
-    position: absolute;
-    bottom: 2em;
     padding: 15px 60px 15px 60px;
     background-color: var(--subElements-color);
 }
 
 .modalContent {
-    position: absolute;
+    overflow: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px;
+    width: 100%;
 }
 
 .modalMessage {
     padding: 2em;
     margin-top: 3em;
+}
+
+.itemDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 95%;
+    height: 120px;
+    margin: 0.8em 0.6em 0 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.imageCart {
+    width: 100px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+.itemLabel {
+    align-self: flex-start;
+}
+
+.itemName {
+    text-wrap: wrap;
+    font-size: 1.2em;
+    margin-left: 13px;
+}
+
+.itemCost {
+    font-family: "Mulish", sans-serif;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.itemDiv::-webkit-scrollbar {
+    width: 10px;
+}
+
+.itemDiv::-webkit-scrollbar-thumb {
+    background: var(--fade-color);
+    border-radius: 5px;
+}
+
+.itemDiv::-webkit-scrollbar-thumb:hover {
+    background: var(--fade-color);
 }
 
 @keyframes effect {
