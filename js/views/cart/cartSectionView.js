@@ -2,6 +2,7 @@ import { div, img, p } from "../../libraries/html.js";
 
 export class CartSectionView {
     constructor(itemsAdded) {
+        this.itemsAdded = itemsAdded;
         this.content = document.createElement('div');
         this.content.className = 'modalContent';
         const cartContent = this.displayItems(itemsAdded);
@@ -17,6 +18,10 @@ export class CartSectionView {
     processOrder() {
         let totalPrice = this.finalPrice;
         if (totalPrice > 0) {
+            let purchasedItems = this.itemsAdded;
+            console.table(purchasedItems);
+            console.log('Precio total de la compra: ' + totalPrice);
+            //Enviar al controller, luego crear un objeto con los datos de la compra, del controller al services.
             //Producto: [cantidad, categoria, nombre] 5 kilos Aguacate, ect...
             //Datos: [Cliente, ubicacion,numero,precio total] Carlos, Turrialba, 40404040, 16.000
             localStorage.removeItem('cart');
