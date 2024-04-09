@@ -136,3 +136,11 @@
         height: 415px;
     }
 }
+
+@media (width <359px) {
+    .productView {
+        font-size: 1.1em;
+        width: 140px;
+        height: 210px;
+    }
+}
