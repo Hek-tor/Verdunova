@@ -100,15 +100,16 @@
 @media (width <375px) {
     .itemsController {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
 
     .productView {
         font-size: 1.2em;
-        width: 250px;
-        height: 220px;
+        width: 160px;
+        height: 230px;
     }
 
     .imageContainer {
@@ -122,15 +123,16 @@
     }
 
     .productLabel {
-        padding: 0.4em;
+        padding: 0.3em;
     }
 
     .productLabel p {
+        text-wrap: nowrap;
         margin-top: 0.9em;
     }
 
     .productModal {
-        width: 280px;
-        height: 430px;
+        width: 290px;
+        height: 415px;
     }
 }

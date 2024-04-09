@@ -24,6 +24,7 @@ body {
 
 .mainContainer {
     max-width: 500px;
+    min-width: 300px;
     margin: 0 auto;
     width: 100vw;
     height: 100vh;

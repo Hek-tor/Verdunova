@@ -97,7 +97,7 @@ export class ItemsView extends ViewForController {
             },
         }).then((result) => {
             const limitQuantity = 30;
-            if (result.isConfirmed && result.value <= limitQuantity) {
+            if (result.isConfirmed && result.value <= limitQuantity && result.value > 0) {
                 let productQuantity = result.value;
                 let name = product.name;
                 let price = product.price;

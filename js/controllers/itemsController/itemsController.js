@@ -30,7 +30,6 @@ export class ItemsController extends Controller {
             image: image,
             quantity: quantity,
             purchaseCost: purchaseCost
-
         };
         this.cart.push(newItem);
         localStorage.setItem('cart', JSON.stringify(this.cart));

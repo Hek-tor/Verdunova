@@ -96,19 +96,6 @@
     color: var(--primary-color);
 }
 
-.itemDiv::-webkit-scrollbar {
-    width: 20px;
-}
-
-.itemDiv::-webkit-scrollbar-thumb {
-    background-color: var(--fade-color);
-    border-radius: 5px;
-}
-
-.itemDiv::-webkit-scrollbar-thumb:hover {
-    background-color: var(--fade-color);
-}
-
 @keyframes effect {
     0% {
         box-shadow: 0 0 0 0 var(--tertiary-color);
