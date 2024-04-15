@@ -28,4 +28,28 @@ export class CartView extends ViewForController {
     getItemsAdded() {
         return this.controller.itemsAdded();
     }
+
+    async showForm() {
+        const { value: formValues } = await Swal.fire({
+            title: "Datos de envío",
+            text: "Ingrese sus datos para finalizar el pedido y poder recibir su orden",
+            html: this.newForm(),
+            focusConfirm: false,
+            preConfirm: () => {
+                return [
+                    document.getElementById("swal-name").value,
+                    document.getElementById("swal-number").value
+                ];
+            }
+        });
+        if (formValues) {
+            //send data
+            Swal.fire(JSON.stringify(formValues));
+        }
+    }
+
+    newForm() {
+        return `<input type=text"" id="swal-name" class="swal2-input" placeholder="Ingrese su nombre"> 
+        <input type="number" id="swal-number" class="swal2-input" placeholder="Ingrese su número celular">`;
+    }
 }

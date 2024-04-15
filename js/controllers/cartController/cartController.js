@@ -13,9 +13,7 @@ export class CartController extends Controller {
 
     processOrder(items, price) {
         this.cleanCart();
-        let totalCost = price;
         let order = this.getOrder(items);
-        console.log(order);
         let user = this.getUserData();
     }
 
@@ -32,7 +30,7 @@ export class CartController extends Controller {
     }
 
     getUserData() {
-        //Datos: [Nombre Cliente, ubicacion, numero,precio total] Carlos, Turrialba, 40404040, 16.000
+        this.view.showForm();
     }
 
     cleanCart() {

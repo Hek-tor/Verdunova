@@ -39,12 +39,13 @@ export class ItemsView extends ViewForController {
             inputAutoFocus: false,
             inputPlaceholder: `Ingrese la cantidad  &#8675`,
             inputOptions: {
-                0.5: "1/2 kilo",
                 1: "Un kilo",
-                1.5: "Kilo 1/2",
                 2: "Dos kilos",
-                2.5: "Dos kilos 1/2",
                 3: "Tres kilos",
+                4: "Cuatro kilos",
+                0.5: "Medio kilo",
+                1.5: "Kilo y medio",
+                2.5: "Dos kilos y medio",
             },
             customClass: {
                 popup: 'productModal',
