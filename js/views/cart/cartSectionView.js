@@ -1,7 +1,9 @@
 import { div, img, p } from "../../libraries/html.js";
+import { ViewForController } from "../viewForController.js";
 
-export class CartSectionView {
-    constructor(itemsAdded) {
+export class CartSectionView extends ViewForController {
+    constructor(controller, parent, itemsAdded) {
+        super(controller, parent);
         this.itemsAdded = itemsAdded;
         this.content = document.createElement('div');
         this.content.className = 'modalContent';
@@ -13,32 +15,6 @@ export class CartSectionView {
         const noItems = 0;
         items.length === noItems ? this.showEmptyContent() : this.showItemsContent(items);
         return this.content;
-    }
-
-    processOrder() {
-        let totalPrice = this.finalPrice;
-        if (totalPrice > 0) {
-            let checkOut = this.getCheckOut();
-            let usserInfo = this.getUsserInfo(totalPrice);
-            console.log(checkOut);
-            //Enviar al controller, luego crear un objeto con los datos de la compra, del controller al services.
-            //Datos: [Cliente, ubicacion,numero,precio total] Carlos, Turrialba, 40404040, 16.000
-            localStorage.removeItem('cart');
-        }
-    }
-
-    getCheckOut() {
-        let newOrder = {};
-        this.itemsAdded.forEach(purchaseItem => {
-            newOrder.quantity = purchaseItem.quantity;
-            newOrder.category = purchaseItem.category;
-            newOrder.name = purchaseItem.name;
-        });
-        return newOrder;
-    }
-
-    getUsserInfo(price) {
-        console.log(price);
     }
 
     showItemsContent(items) {
@@ -88,8 +64,8 @@ export class CartSectionView {
                 popup: `animate__animated animate__slideOutRight animate__faster`
             },
         }).then((result) => {
-            if (result.isConfirmed) {
-                this.processOrder();
+            if (result.isConfirmed && this.finalPrice > 0) {
+                this.controller.processOrder(this.itemsAdded, this.finalPrice);
             }
         });
     }

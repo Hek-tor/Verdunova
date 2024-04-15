@@ -10,4 +10,32 @@ export class CartController extends Controller {
     itemsAdded() {
         return JSON.parse(localStorage.getItem('cart')) || [];
     }
+
+    processOrder(items, price) {
+        this.cleanCart();
+        let totalCost = price;
+        let order = this.getOrder(items);
+        console.log(order);
+        let user = this.getUserData();
+    }
+
+    getOrder(purchaseItems) {
+        let newOrder = [];
+        purchaseItems.forEach(purchaseItem => {
+            let quantity = purchaseItem.quantity;
+            let category = purchaseItem.category;
+            let productName = purchaseItem.name;
+            let order = `${quantity} ${category} ${productName}`;
+            newOrder.push(order);
+        });
+        return newOrder;
+    }
+
+    getUserData() {
+        //Datos: [Nombre Cliente, ubicacion, numero,precio total] Carlos, Turrialba, 40404040, 16.000
+    }
+
+    cleanCart() {
+        localStorage.removeItem('cart');
+    }
 }

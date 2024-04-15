@@ -22,7 +22,7 @@ export class CartView extends ViewForController {
 
     showCart() {
         let itemsAdded = this.getItemsAdded();
-        const showCart = new CartSectionView(itemsAdded);
+        let showCart = new CartSectionView(this.controller, this.parent, itemsAdded);
     }
 
     getItemsAdded() {
