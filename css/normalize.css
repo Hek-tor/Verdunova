@@ -141,9 +141,21 @@ div:where(.swal2-container) button:where(.swal2-close) {
 }
 
 .swal2-html-container {
-    height: 600px;
+    height: 580px;
 }
 
 .swal2-container {
     padding: 0 10px 0 10px;
+}
+
+@media (height <785px) {
+    .swal2-html-container {
+        height: 545px;
+    }
+}
+
+@media (height <=720px) {
+    .swal2-html-container {
+        height: 500px;
+    }
 }

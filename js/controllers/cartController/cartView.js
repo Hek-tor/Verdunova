@@ -30,10 +30,11 @@ export class CartView extends ViewForController {
     }
 
     async showForm() {
+        let form = this.newForm();
         const { value: formValues } = await Swal.fire({
             title: "Datos de envío",
             text: "Ingrese sus datos para finalizar el pedido y poder recibir su orden",
-            html: this.newForm(),
+            html: form,
             focusConfirm: false,
             preConfirm: () => {
                 return [
