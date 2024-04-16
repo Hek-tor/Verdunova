@@ -12,16 +12,16 @@ export class ItemsController extends Controller {
         this.view.container.className = 'itemsController';
         this.view.container.id = 'Verduras';
     }
-    
+
     receiveProducts(itemList) {
         this.view.showProductsUI(itemList);
     }
-    
+
     productSelected(event) {
         this.view.showProductSelected(event);
     }
-    
-    addProduct(name, price, category, quantity, image) {
+
+    addProduct(name, quantityText, price, category, quantity, image) {
         this.cart = JSON.parse(localStorage.getItem('cart')) || [];
         let purchaseCost = price * quantity;
         let newItem = {
@@ -29,6 +29,7 @@ export class ItemsController extends Controller {
             category: category,
             image: image,
             quantity: quantity,
+            quantityText: quantityText,
             purchaseCost: purchaseCost
         };
         this.cart.push(newItem);

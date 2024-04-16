@@ -24,6 +24,15 @@ export class ItemsView extends ViewForController {
     };
 
     async showCategoryKilo(product) {
+        const inputOptions = {
+            1: "Un kilo",
+            2: "Dos kilos",
+            3: "Tres kilos",
+            4: "Cuatro kilos",
+            0.5: "Medio kilo",
+            1.5: "Kilo y medio",
+            2.5: "Dos kilos y medio",
+        };
         let result = await Swal.fire({
             title: `¿Agregar ${(product.name).toLowerCase()}?`,
             imageUrl: `${product.imageURL}`,
@@ -38,15 +47,7 @@ export class ItemsView extends ViewForController {
             allowEnterKey: true,
             inputAutoFocus: false,
             inputPlaceholder: `Ingrese la cantidad  &#8675`,
-            inputOptions: {
-                1: "Un kilo",
-                2: "Dos kilos",
-                3: "Tres kilos",
-                4: "Cuatro kilos",
-                0.5: "Medio kilo",
-                1.5: "Kilo y medio",
-                2.5: "Dos kilos y medio",
-            },
+            inputOptions: inputOptions,
             customClass: {
                 popup: 'productModal',
                 input: 'inputModal',
@@ -61,11 +62,12 @@ export class ItemsView extends ViewForController {
         }).then((result) => {
             if (result.isConfirmed) {
                 let productQuantity = result.value;
+                let quantityText = inputOptions[productQuantity];
                 let name = product.name;
                 let image = product.imageURL;
                 let category = product.category;
                 let price = product.price;
-                this.sendProduct(name, price, category, productQuantity, image);
+                this.sendProduct(name, quantityText, price, category, productQuantity, image);
             };
         });
     }
@@ -100,22 +102,23 @@ export class ItemsView extends ViewForController {
             const limitQuantity = 30;
             if (result.isConfirmed && result.value <= limitQuantity && result.value > 0) {
                 let productQuantity = result.value;
+                let quantityText = productQuantity <= 1 ? `${productQuantity} unidad` : `${productQuantity} unidades`;
                 let name = product.name;
                 let price = product.price;
                 let category = product.category;
                 let image = product.imageURL;
-                this.sendProduct(name, price, category, productQuantity, image);
+                this.sendProduct(name, quantityText, price, category, productQuantity, image);
             };
         });
     }
 
-    sendProduct(name, price, category, quantity, image) {
+    sendProduct(name, quantityText, price, category, quantity, image) {
         if (quantity !== '' && quantity !== undefined) {
             Swal.fire({
                 icon: "success",
                 showConfirmButton: false,
-                timer: 2000,
-                title: `${quantity} ${category} de ${name} fue agregado al carrito.`,
+                timer: 2200,
+                title: `${quantityText} de ${name} fue agregado al carrito.`,
                 customClass: { popup: 'productModal', title: 'modalTittle' },
                 showClass: {
                     popup: `animate__animated animate__pulse animate__faster`
@@ -124,7 +127,7 @@ export class ItemsView extends ViewForController {
                     popup: `animate__animated animate__bounceOut animate__faster`
                 },
             });
-            this.controller.addProduct(name, price, category, quantity, image);
+            this.controller.addProduct(name, quantityText, price, category, quantity, image);
         };
     };
 }

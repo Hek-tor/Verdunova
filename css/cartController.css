@@ -74,10 +74,6 @@
     width: 95px;
     height: 85px;
     border-radius: 50%;
-
-    -webkit-box-shadow: 4px 3px 23px 1px rgba(17, 76, 95, 0.5);
-    -moz-box-shadow: 4px 3px 23px 1px rgba(17, 76, 95, 0.5);
-    box-shadow: 4px 3px 23px 1px rgba(17, 76, 95, 0.5);
 }
 
 .itemLabel {

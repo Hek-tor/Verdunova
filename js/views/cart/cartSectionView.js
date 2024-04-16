@@ -25,7 +25,7 @@ export class CartSectionView extends ViewForController {
             let itemLabel = div(itemDiv, { className: 'itemLabel' });
             let name = p(itemLabel, { className: 'itemName' });
             let cost = p(itemLabel, { className: 'itemCost' });
-            name.textContent = `${item.quantity} ${item.category} de ${item.name}`;
+            name.textContent = `${item.quantityText} ${item.name}`;
             cost.textContent = `${item.purchaseCost} colones`;
             this.finalPrice += item.purchaseCost;
         });
