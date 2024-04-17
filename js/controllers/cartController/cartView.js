@@ -29,28 +29,50 @@ export class CartView extends ViewForController {
         return this.controller.itemsAdded();
     }
 
-    async showForm() {
-        let form = this.newForm();
+    async showForm(price) {
+        let form = this.newForm(price);
         const { value: formValues } = await Swal.fire({
             title: "Datos de envío",
             text: "Ingrese sus datos para finalizar el pedido y poder recibir su orden",
-            html: form,
+            heightAuto: true,
+            showConfirmButton: true,
+            inputAutoFocus: false,
             focusConfirm: false,
+            confirmButtonColor: "#F77F00",
+            confirmButtonText: "Confirmar compra",
+            showCloseButton: true,
+            html: form,
+            customClass: {
+                popup: 'checkOut',
+                input: 'checkInput',
+                title: 'checkTittle',
+                closeButton: 'closeButtonModal',
+                confirmButton: 'checkButton',
+            },
+            showClass: {
+                popup: `animate__animated animate__zoomIn animate__faster`
+            },
+            hideClass: {
+                popup: `animate__animated animate__zoomOut animate__faster`
+            },
             preConfirm: () => {
                 return [
                     document.getElementById("swal-name").value,
-                    document.getElementById("swal-number").value
+                    document.getElementById("swal-number").value,
+                    document.getElementById("swal-location").value
                 ];
             }
         });
         if (formValues) {
-            //send data
-            Swal.fire(JSON.stringify(formValues));
         }
     }
 
-    newForm() {
-        return `<input type=text"" id="swal-name" class="swal2-input" placeholder="Ingrese su nombre"> 
-        <input type="number" id="swal-number" class="swal2-input" placeholder="Ingrese su número celular">`;
+    newForm(price) {
+        const name = `<input type=text"" id="swal-name" class="swal2-input swal-form" placeholder="Ingrese su nombre">`;
+        const number = `<input type="number" id="swal-number" class="swal2-input swal-form" placeholder="Ingrese su número celular">`;
+        const location = `<input type=text"" id="swal-location" class="swal2-input swal-form" placeholder="Ingrese su dirección">`;
+        const total = `<p class="swal-price">Total a pagar: ₡ ${price}</p>`;
+        let form = `${name} ${number} ${location} ${total}`;
+        return form
     }
 }

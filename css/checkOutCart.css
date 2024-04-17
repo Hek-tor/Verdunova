@@ -1,0 +1,57 @@
+.checkOut {
+    font-family: "Mulish", sans-serif;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swal-form {
+    width: 300px;
+    height: 40px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: black;
+    text-align: center;
+    outline: none;
+    transition: box-shadow 0.4s ease;
+}
+
+div>.checkOut {
+    height: 500px;
+
+    .swal2-html-container {
+        height: 300px;
+    }
+}
+
+.checkTittle {
+    color: var(--primary-color);
+}
+
+.swal-price {
+    text-align: center;
+    text-wrap: wrap;
+    margin-top: 35px;
+    font-size: 1.2em;
+}
+
+.swal-form:focus,
+.swal-form:active {
+    box-shadow: 0 2px 0 var(--primary-color);
+    -webkit-box-shadow: 0px 10px 18px -13px rgba(17, 76, 95, 1);
+    -moz-box-shadow: 0px 10px 18px -13px rgba(17, 76, 95, 1);
+    box-shadow: 0px 10px 18px -13px rgba(17, 76, 95, 1);
+}
+
+.checkButton {
+    font-family: "Poppins", sans-serif;
+    padding: 12px 55px 12px 55px;
+}

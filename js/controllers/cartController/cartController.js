@@ -14,23 +14,22 @@ export class CartController extends Controller {
     processOrder(items, price) {
         this.cleanCart();
         let order = this.getOrder(items);
-        let user = this.getUserData();
+        let userData = this.getUserData(price);
     }
 
     getOrder(purchaseItems) {
         let newOrder = [];
         purchaseItems.forEach(purchaseItem => {
-            let quantity = purchaseItem.quantity;
-            let category = purchaseItem.category;
+            let quantityText = purchaseItem.quantityText;
             let productName = purchaseItem.name;
-            let order = `${quantity} ${category} ${productName}`;
+            let order = `${quantityText} de ${productName}`;
             newOrder.push(order);
         });
         return newOrder;
     }
 
-    getUserData() {
-        this.view.showForm();
+    getUserData(price) {
+        this.view.showForm(price);
     }
 
     cleanCart() {
