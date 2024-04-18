@@ -66,7 +66,7 @@ export class CartView extends ViewForController {
                 let userData = result.value;
                 const formValidator = (userInputs) => userInputs.trim() !== '';
                 const isApproved = userData.every(formValidator);
-                return isApproved ? userData : this.rejectOrderView('DATOS INCOMPLETOS');
+                return isApproved ? (this.controller.cleanCart(), userData) : this.rejectOrderView('DATOS INCOMPLETOS');
             }
         });
     }

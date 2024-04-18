@@ -13,7 +13,6 @@ export class CartController extends Controller {
 
     processOrder(items, price) {
         this.price = price;
-        // this.cleanCart();
         let order = this.getOrder(items);
         let userData = this.getUserData(price);
     }
