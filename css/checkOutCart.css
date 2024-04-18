@@ -11,7 +11,7 @@
 }
 
 .swal-form {
-    width: 300px;
+    width: 280px;
     height: 40px;
     padding: 25px;
     box-sizing: border-box;
@@ -37,6 +37,7 @@ div>.checkOut {
 }
 
 .swal-price {
+    font-family: "Poppins", sans-serif;
     text-align: center;
     text-wrap: wrap;
     margin-top: 35px;
@@ -54,4 +55,42 @@ div>.checkOut {
 .checkButton {
     font-family: "Poppins", sans-serif;
     padding: 12px 55px 12px 55px;
+}
+
+@media (width <=400px) {
+    .swal-form {
+        width: 260px;
+        height: 35px;
+        padding: 25px;
+    }
+}
+
+@media (width <=380px) {
+    .swal-form {
+        font-size: 1em;
+        width: 250px;
+        height: 25px;
+        padding: 15px;
+    }
+}
+
+@media (width <360px) {
+    .checkTittle {
+        margin-top: 20px;
+    }
+
+    .swal-form {
+        font-size: 0.96em;
+        width: 235px;
+        height: 35px;
+        padding: 15px;
+    }
+
+    .swal-price {
+        font-size: 1em;
+    }
+
+    .checkButton {
+        padding: 12px 30px 12px 20px;
+    }
 }
