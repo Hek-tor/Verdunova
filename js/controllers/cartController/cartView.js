@@ -31,7 +31,7 @@ export class CartView extends ViewForController {
 
     async showForm(price) {
         let form = this.newForm(price);
-        const { value: formValues } = await Swal.fire({
+        let result = await Swal.fire({
             title: "Datos de envío",
             text: "Ingrese sus datos para finalizar el pedido y poder recibir su orden",
             heightAuto: true,
@@ -61,9 +61,32 @@ export class CartView extends ViewForController {
                     document.getElementById("swal-location").value
                 ];
             }
+        }).then(result => {
+            if (result.isConfirmed) {
+                let userData = result.value;
+                const formValidator = (userInputs) => userInputs.trim() !== '';
+                const isApproved = userData.every(formValidator);
+                return isApproved ? userData : this.rejectOrderView('DATOS INCOMPLETOS');
+            }
         });
-        if (formValues) {
-        }
+    }
+
+    async rejectOrderView(alert) {
+        await Swal.fire({
+            icon: "error",
+            title: alert,
+            text: `Por favor, asegúrate de completar todos los datos del formulario para poder procesar tu pedido correctamente. ¡Gracias!`,
+            showConfirmButton: false,
+            timer: 3200,
+            customClass: {
+                popup: 'rejectCheckOut',
+            },
+            showClass: {
+                popup: `animate__animated animate__headShake animate__faster`
+            },
+        }).then(() => {
+            this.controller.rejectOrder();
+        })
     }
 
     newForm(price) {

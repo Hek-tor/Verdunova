@@ -64,6 +64,16 @@ div>.checkOut {
     padding: 12px 55px 12px 55px;
 }
 
+.rejectCheckOut {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    padding: 25px;
+    font-size: 0.9em;
+    width: 350px;
+    height: 400px;
+}
+
 @media (width <=400px) {
     .swal-form {
         width: 260px;

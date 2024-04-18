@@ -5,6 +5,7 @@ export class CartSectionView extends ViewForController {
     constructor(controller, parent, itemsAdded) {
         super(controller, parent);
         this.itemsAdded = itemsAdded;
+        this.finalPrice = 0;
         this.content = document.createElement('div');
         this.content.className = 'modalContent';
         const cartContent = this.displayItems(itemsAdded);
@@ -18,7 +19,6 @@ export class CartSectionView extends ViewForController {
     }
 
     showItemsContent(items) {
-        this.finalPrice = 0;
         items.forEach(item => {
             let itemDiv = div(this.content, { className: 'itemDiv' });
             let image = img(itemDiv, { className: 'imageCart' }).src = `${item.image}`;
