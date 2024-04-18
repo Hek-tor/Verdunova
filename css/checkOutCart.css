@@ -52,6 +52,13 @@ div>.checkOut {
     box-shadow: 0px 10px 18px -13px rgba(17, 76, 95, 1);
 }
 
+.closeCheckOut {
+    padding: 0px;
+    margin-top: 15px;
+    position: absolute;
+    font-size: 3em;
+}
+
 .checkButton {
     font-family: "Poppins", sans-serif;
     padding: 12px 55px 12px 55px;

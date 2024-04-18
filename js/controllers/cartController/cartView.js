@@ -45,7 +45,7 @@ export class CartView extends ViewForController {
                 popup: 'checkOut',
                 input: 'checkInput',
                 title: 'checkTittle',
-                closeButton: 'closeButtonModal',
+                closeButton: 'closeCheckOut',
                 confirmButton: 'checkButton',
             },
             showClass: {

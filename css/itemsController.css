@@ -70,10 +70,10 @@
 }
 
 .closeButtonModal {
-    padding: 5px;
+    padding: 0px;
     position: absolute;
     color: var(--tertiary-color);
-    font-size: 4.2em;
+    font-size: 4em;
     font-weight: bold;
 }
 
