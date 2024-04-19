@@ -21,18 +21,32 @@ export class ItemsController extends Controller {
         this.view.showProductSelected(event);
     }
 
-    addProduct(name, quantityText, price, category, quantity, image) {
+    addProduct(name, quantityText, price, category, quantity, image, id) {
         this.cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let purchaseCost = price * quantity;
-        let newItem = {
-            name: name,
-            category: category,
-            image: image,
-            quantity: quantity,
-            quantityText: quantityText,
-            purchaseCost: purchaseCost
-        };
-        this.cart.push(newItem);
+        let existingItem = this.cart.find(item => item.id === id);
+
+        if (existingItem) {
+            existingItem.quantity += quantity;
+            existingItem.purchaseCost += price * quantity;
+            let newText = String(quantityText).replace(/\d+(\.\d+)?/, existingItem.quantity);
+            if (Number.isInteger(parseFloat(quantity))) {
+                existingItem.quantityText = `${newText} de`;
+            } else {
+                existingItem.quantityText = `${existingItem.quantity} kilos de`;
+            }
+        } else {
+            let purchaseCost = parseInt((price * quantity), 10);
+            let newItem = {
+                name: name,
+                category: category,
+                image: image,
+                quantity: quantity,
+                quantityText: quantityText,
+                purchaseCost: purchaseCost,
+                id: id
+            };
+            this.cart.push(newItem);
+        }
         localStorage.setItem('cart', JSON.stringify(this.cart));
     }
 }
