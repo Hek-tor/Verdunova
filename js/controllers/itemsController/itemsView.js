@@ -60,7 +60,8 @@ export class ItemsView extends ViewForController {
                 popup: `animate__animated animate__fadeInDown animate__faster`
             },
         }).then((result) => {
-            if (result.isConfirmed) {
+            let value = result.value;
+            if (result.isConfirmed && value > 0 && value != '') {
                 let productQuantity = parseFloat(result.value);
                 let quantityText = inputOptions[productQuantity];
                 let name = product.name;
@@ -101,7 +102,8 @@ export class ItemsView extends ViewForController {
             },
         }).then((result) => {
             const limitQuantity = 30;
-            if (result.isConfirmed && result.value <= limitQuantity && result.value > 0) {
+            let value = result.value;
+            if (result.isConfirmed && result.value <= limitQuantity && value > 0 && value != '') {
                 let productQuantity = parseInt(result.value, 10);
                 let quantityText = productQuantity <= 1 ? `${productQuantity} unidad` : `${productQuantity} unidades`;
                 let name = product.name;
