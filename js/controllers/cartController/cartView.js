@@ -29,7 +29,7 @@ export class CartView extends ViewForController {
         return this.controller.itemsAdded();
     }
 
-    async showForm(price) {
+    async confirmOrder(order, price) {
         let form = this.newForm(price);
         let result = await Swal.fire({
             title: "Datos de envío",
@@ -66,20 +66,46 @@ export class CartView extends ViewForController {
                 let userData = result.value;
                 const formValidator = (userInputs) => userInputs.trim() !== '';
                 const isApproved = userData.every(formValidator);
-                return isApproved ? (this.controller.cleanCart(), userData) : this.rejectOrderView('DATOS INCOMPLETOS');
+                if (isApproved) {
+                    this.controller.cleanCart();
+                    this.controller.successOrder(order, userData, price);
+                } else {
+                    this.rejectOrderView('DATOS INCOMPLETOS');
+                }
             }
         });
     }
 
-    async rejectOrderView(alert) {
-        await Swal.fire({
+    successOrder() {
+        Swal.fire({
+            icon: "success",
+            title: 'Pedido enviado correctamente',
+            text: 'Puedes cancelar el monto por sinpe móvil o en efectivo cuando se te entregue el pedido.',
+            showConfirmButton: false,
+            timer: 3000,
+            customClass: {
+                popup: 'successOrder',
+                title: 'tittleSuccess',
+            },
+            showClass: {
+                popup: `animate__animated animate__zoomIn animate__faster`
+            },
+            hideClass: {
+                popup: `animate__animated animate__flipOutX animate__faster`
+            },
+        });
+    }
+
+    rejectOrderView(alert) {
+        Swal.fire({
             icon: "error",
             title: alert,
-            text: `Por favor, asegúrate de completar todos los datos del formulario para poder procesar tu pedido correctamente. ¡Gracias!`,
+            text: `Por favor, asegúrese de completar todos los datos del formulario para poder procesar tu pedido correctamente. ¡Gracias!`,
             showConfirmButton: false,
             timer: 3200,
             customClass: {
                 popup: 'rejectCheckOut',
+                title: 'tittleReject',
             },
             showClass: {
                 popup: `animate__animated animate__headShake animate__faster`

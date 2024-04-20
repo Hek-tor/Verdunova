@@ -12,13 +12,22 @@ export class CartController extends Controller {
     }
 
     processOrder(items, price) {
+        this.order = this.getOrder(items);
         this.price = price;
-        let order = this.getOrder(items);
-        let userData = this.getUserData(price);
+        this.view.confirmOrder(this.order, this.price);
+    }
+
+    successOrder(order, userData, price) {
+        this.view.successOrder();
+        let newInvoice = {
+            orders: order,
+            client: userData,
+            totalPrice: price
+        }
     }
 
     rejectOrder() {
-        this.getUserData(this.price);
+        this.view.confirmOrder(this.order, this.price);
     }
 
     getOrder(purchaseItems) {
@@ -30,10 +39,6 @@ export class CartController extends Controller {
             newOrder.push(order);
         });
         return newOrder;
-    }
-
-    getUserData(price) {
-        this.view.showForm(price);
     }
 
     cleanCart() {
