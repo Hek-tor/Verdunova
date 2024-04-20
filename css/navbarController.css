@@ -71,9 +71,9 @@
 }
 
 .bannerLogo {
-    object-fit: cover;
-    width: 85%;
-    height: 3.5em;
+    object-fit: contain;
+    width: 90%;
+    height: 4em;
 }
 
 .closeMenu {
