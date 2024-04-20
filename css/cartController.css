@@ -24,6 +24,7 @@
 
 .cartModal {
     font-family: "Poppins", sans-serif;
+    font-weight: 400;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,6 +39,7 @@
 }
 
 .cartModalButton {
+    font-weight: 500;
     padding: 15px 60px 15px 60px;
     background-color: var(--subElements-color);
 }

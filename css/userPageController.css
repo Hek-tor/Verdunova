@@ -44,6 +44,7 @@
 
 .benefitIcon {
     width: 4.5rem;
+    height: 4.5em;
 }
 
 .textBenefits {
@@ -76,22 +77,23 @@
     }
 
     .callToActions {
-        padding: 12px;
+        padding: 25px;
     }
 
     .benefitOption {
         width: 5.5em;
         height: 5em;
-        padding: 1em 0 0 1.3em;
+        padding: 0.9em 0 0 1em;
     }
 
     .benefitIcon {
-        width: 3rem;
+        width: 3.8rem;
+        height: 3.4em;
     }
 
     .textBenefits {
-        font-size: 1.2em;
-        gap: 30px;
+        font-size: 1.3em;
+        gap: 25px;
         margin: 0 auto;
     }
 }
@@ -99,5 +101,26 @@
 @media (width <375px) {
     .hero {
         padding: 35px;
+    }
+
+    .callToActions {
+        padding: 10px;
+    }
+
+    .benefitOption {
+        width: 5.2em;
+        height: 5em;
+        padding: 0.9em 0 0 1em;
+    }
+
+    .benefitIcon {
+        width: 3.3rem;
+        height: 3.2em;
+    }
+
+    .textBenefits {
+        font-size: 1.2em;
+        gap: 5px;
+        margin: 0 auto;
     }
 }
