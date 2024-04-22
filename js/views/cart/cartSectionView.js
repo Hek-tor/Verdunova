@@ -27,6 +27,8 @@ export class CartSectionView extends ViewForController {
             let cost = p(itemLabel, { className: 'itemCost' });
             name.textContent = `${item.quantityText} ${item.name}`;
             cost.textContent = `${item.purchaseCost} colones`;
+            let deleteIcon = img(itemDiv, { className: 'deleteIcon' });
+            deleteIcon.src = `../../assets/icons/delete-icon.svg`;
             this.finalPrice += item.purchaseCost;
         });
     }

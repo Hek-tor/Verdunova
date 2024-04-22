@@ -66,7 +66,7 @@
     justify-content: start;
     text-align: center;
     width: 95%;
-    height: 120px;
+    height: 150px;
     margin: 0.8em 0.6em 0 0;
     border-bottom: 1px solid var(--primary-color);
 }
@@ -80,7 +80,6 @@
 
 .itemLabel {
     max-width: 235px;
-    padding: 10px;
     text-align: center;
     align-self: center;
 }
@@ -97,6 +96,13 @@
     font-size: 1.2em;
     font-weight: bold;
     color: var(--primary-color);
+}
+
+.deleteIcon {
+    margin-left: 15px;
+    align-self: center;
+    width: 35px;
+    height: 35px;
 }
 
 @media (width <365px) {
