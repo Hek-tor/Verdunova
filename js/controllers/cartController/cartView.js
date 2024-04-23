@@ -76,7 +76,7 @@ export class CartView extends ViewForController {
         });
     }
 
-    successOrder() {
+    showSuccessOrder() {
         Swal.fire({
             icon: "success",
             title: 'Pedido enviado correctamente',

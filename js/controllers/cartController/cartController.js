@@ -1,9 +1,12 @@
+import { InvoiceService } from "../../services/invoiceServices/invoiceServices.js";
 import { Controller } from "../Controller.js";
 import { CartView } from "./cartView.js";
+
 
 export class CartController extends Controller {
     constructor(appManager, parent) {
         super(appManager, parent);
+        this.service = new InvoiceService(this);
         this.view = new CartView(this, parent);
     }
 
@@ -18,12 +21,14 @@ export class CartController extends Controller {
     }
 
     successOrder(order, userData, price) {
-        this.view.successOrder();
+        this.view.showSuccessOrder();
         let newInvoice = {
             orders: order,
             client: userData,
             totalPrice: price
         }
+        //crear pdf con jsPDF
+        this.service.sendInvoice(newInvoice);
     }
 
     rejectOrder() {

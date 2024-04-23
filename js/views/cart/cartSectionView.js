@@ -20,8 +20,8 @@ export class CartSectionView extends ViewForController {
     }
 
     eventDeleteItem(items) {
-        let itemsList = items;
         this.content.addEventListener('click', (e) => {
+            let itemsList = items;
             if (e.target.className == 'deleteIcon') {
                 let deleteId = parseInt(e.target.getAttribute('item-id'));
                 let newCart = this.controller.deleteItem(deleteId, itemsList);
@@ -31,7 +31,7 @@ export class CartSectionView extends ViewForController {
     }
 
     updateCart(newCartList) {
-        const displayCart = 'animate__animated animate__fadeIn animate__faster';
+        const displayCart = 'animate__animated animate__bounceIn';
         this.finalPrice = 0;
         this.content.remove();
         this.content = document.createElement('div');
@@ -86,7 +86,7 @@ export class CartSectionView extends ViewForController {
                 confirmButton: 'cartModalButton',
             },
             showClass: {
-                popup: displayCart
+                popup: displayCart,
             },
             hideClass: {
                 popup: `animate__animated animate__slideOutRight animate__faster`
