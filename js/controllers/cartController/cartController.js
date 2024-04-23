@@ -41,7 +41,18 @@ export class CartController extends Controller {
         return newOrder;
     }
 
+    deleteItem(deleteId, list) {
+        this.cleanCart();
+        list = list.filter(items => items.id !== deleteId);
+        this.updateCart(list);
+        return list;
+    }
+
     cleanCart() {
         localStorage.removeItem('cart');
+    }
+
+    updateCart(updateItems) {
+        localStorage.setItem('cart', JSON.stringify(updateItems));
     }
 }
