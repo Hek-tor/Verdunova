@@ -1,4 +1,4 @@
-import { h3, div, p } from "../../libraries/html.js";
+import { h6, div, p } from "../../libraries/html.js";
 import { ViewForController } from "../../views/viewForController.js";
 
 export class FooterView extends ViewForController {
@@ -6,7 +6,7 @@ export class FooterView extends ViewForController {
         super(controller, parent);
         this.container.className = 'footerContent';
         this.container.id = 'Entregas';
-        this.delivery = h3(this.container, { className: 'titleSection' }).textContent = 'Entregas';
+        this.delivery = h6(this.container, { className: 'titleSection' }).textContent = 'Entregas';
         this.line = div(this.container, { className: 'lineDecoration' });
 
         this.description = p(this.container, { className: 'description' });
