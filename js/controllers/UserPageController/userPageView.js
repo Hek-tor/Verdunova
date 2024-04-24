@@ -1,4 +1,4 @@
-import { div, p } from "../../libraries/html.js";
+import { div, h2, p } from "../../libraries/html.js";
 import { ViewForController } from "../../views/viewForController.js";
 
 export class UserPageView extends ViewForController {
@@ -24,7 +24,7 @@ export class UserPageView extends ViewForController {
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Elige';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Ordena';
         this.text = p(this.textBenefits, { className: 'callToActionText' }).textContent = 'Recibe';
-        this.title = p(this.container, { className: 'title' }).textContent = 'Lista de productos:';
+        this.title = h2(this.container, { className: 'title' }).textContent = 'Lista de productos:';
     }
 
     createBenefitIcon(src, alt, parentElement) {

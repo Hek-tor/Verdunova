@@ -22,8 +22,8 @@ export const ul = function (parent, attributes) {
     return createElement('ul', parent, attributes);
 }
 
-export const h6 = function (parent, attributes) {
-    return createElement('h6', parent, attributes);
+export const h2 = function (parent, attributes) {
+    return createElement('h2', parent, attributes);
 }
 
 const createElement = function (type, parent, attributes) {
