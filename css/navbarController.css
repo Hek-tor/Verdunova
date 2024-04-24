@@ -1,7 +1,7 @@
 .navbarController {
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     font-family: 'Poppins', sans-serif;
 
@@ -54,6 +54,7 @@
 
 .hamburgerMenu {
     top: 1em;
+    left: -35px;
     width: 42px;
     height: 12px;
     background-color: var(--primary-color);
@@ -71,9 +72,8 @@
 }
 
 .bannerLogo {
-    object-fit: contain;
-    width: 90%;
-    height: 4em;
+    width: 65%;
+    height: auto;
 }
 
 .closeMenu {

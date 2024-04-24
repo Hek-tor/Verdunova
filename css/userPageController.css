@@ -38,13 +38,13 @@
     background-color: var(--secundary-color);
     border-radius: 100%;
     width: 6.8em;
-    height: 6.8em;
-    padding: 1em 0 0 1.3em;
+    height: 6.4em;
+    padding: 0.8em 0 0 1.2em;
 }
 
 .benefitIcon {
-    width: 4.5rem;
-    height: 4.5em;
+    width: 75px;
+    height:75px;
 }
 
 .textBenefits {
