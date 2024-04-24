@@ -93,6 +93,7 @@ export class CartSectionView extends ViewForController {
             },
         }).then((result) => {
             if (result.isConfirmed && this.finalPrice > 0) {
+                this.finalPrice = parseInt((this.finalPrice), 10);
                 this.controller.processOrder(this.itemsAdded, this.finalPrice);
             }
         });

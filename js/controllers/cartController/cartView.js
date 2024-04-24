@@ -1,6 +1,7 @@
 import { ViewForController } from "../../views/viewForController.js";
 import { div, img } from "../../libraries/html.js";
 import { CartSectionView } from "../../views/cart/cartSectionView.js";
+import invoicePDF from '../../libraries/invoicePDF.js';
 
 export class CartView extends ViewForController {
     constructor(controller, parent) {
@@ -76,11 +77,12 @@ export class CartView extends ViewForController {
         });
     }
 
-    showSuccessOrder() {
+    showSuccessOrder(invoice) {
+        let user = invoice.customer[0];
         Swal.fire({
             icon: "success",
-            title: 'Pedido enviado correctamente',
-            text: 'Puedes cancelar el monto por sinpe móvil o en efectivo cuando se te entregue el pedido.',
+            title: `${user}, gracias por hacer tu pedido`,
+            text: 'Puedes cancelar el monto por sinpe móvil o en efectivo el día de la entrega.',
             showConfirmButton: false,
             timer: 3000,
             customClass: {
@@ -93,7 +95,9 @@ export class CartView extends ViewForController {
             hideClass: {
                 popup: `animate__animated animate__flipOutX animate__faster`
             },
-        });
+        }).then(() => {
+            invoicePDF.createPDF(invoice);
+        })
     }
 
     rejectOrderView(alert) {

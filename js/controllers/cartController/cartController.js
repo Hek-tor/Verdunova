@@ -21,13 +21,12 @@ export class CartController extends Controller {
     }
 
     successOrder(order, userData, price) {
-        this.view.showSuccessOrder();
         let newInvoice = {
             orders: order,
-            client: userData,
+            customer: userData,
             totalPrice: price
         }
-        //crear pdf con jsPDF
+        this.view.showSuccessOrder(newInvoice);
         this.service.sendInvoice(newInvoice);
     }
 

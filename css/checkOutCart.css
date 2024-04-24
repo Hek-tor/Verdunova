@@ -82,15 +82,16 @@ div>.checkOut {
 
 .successOrder {
     font-family: "Mulish", sans-serif;
-    width: 320px;
+    width: 330px;
     height: 415px;
     padding: 20px;
     border-radius: 15px;
 }
 
 .tittleSuccess {
+    font-size: 27px;
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 @media (width <=400px) {
