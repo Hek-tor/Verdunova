@@ -1,0 +1,22 @@
+{
+  "name": "verdunova",
+  "version": "1.0.0",
+  "description": "\"This web application emerged from the necessity of a home delivery business to streamline the browsing and ordering process for their customers. \r Recognizing the need to provide a user-friendly catalog, the VerduNova project was conceived through thorough analysis and prototyping. \r It offers a seamless one-page solution, allowing customers to effortlessly browse and place orders online, addressing the business's need for an efficient and accessible platform.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
