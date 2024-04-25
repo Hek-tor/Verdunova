@@ -25,6 +25,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
+                { from: './index.html', to: 'index.html' }, // Copia el HTML a la carpeta dist
                 { from: './css/normalize.css', to: 'normalize.css' },
                 { from: './assets', to: 'assets' },
             ],
