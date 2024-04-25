@@ -82,9 +82,9 @@ export class CartView extends ViewForController {
         Swal.fire({
             icon: "success",
             title: `${user}, gracias por hacer tu pedido`,
-            text: 'Puedes cancelar el monto por sinpe móvil o en efectivo el día de la entrega.',
+            text: 'Hemos recibido el pedido, te dejamos una copia de la factura. Puedes pagar por sinpe o efectivo.',
             showConfirmButton: false,
-            timer: 3000,
+            timer: 2800,
             customClass: {
                 popup: 'successOrder',
                 title: 'tittleSuccess',
