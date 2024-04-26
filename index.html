@@ -10,6 +10,7 @@
         <meta name="description" content="Tienda venta de verduras y frutas, se realizan entregas a domicilio">
         <script type="module" src="js/main.js"></script>
         <script src="js/libraries/gsap.min.js"></script>
+        <link rel="manifest" href="manifest.json">
         <link rel="icon" href="assets/icons/favicon.webp">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -21,7 +22,12 @@
         <link rel="stylesheet" href="css/footerController.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
-        <script src="js/libraries//jspdf.min.js" async></script>
+        <script src="js/libraries/jspdf.min.js" async></script>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("sw.js");
+            }
+        </script>
     </head>
 
     <body>
