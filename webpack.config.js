@@ -8,7 +8,8 @@ module.exports = {
     mode: 'production',
     entry: './js/main.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'js/[name].bundle.js',
+        assetModuleFilename: 'css/[name][ext][query]',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -21,13 +22,16 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles.css',
+            filename: 'css/[name].bundle.css',
         }),
         new CopyPlugin({
             patterns: [
-                { from: './index.html', to: 'index.html' }, // Copia el HTML a la carpeta dist
+                { from: './index.html', to: 'index.html' },
                 { from: './css/normalize.css', to: 'normalize.css' },
                 { from: './assets', to: 'assets' },
+                { from: './js/services/itemServices/products.json', to: 'products.json' },
+                { from: './js/libraries/gsap.min.js', to: 'gsap.min.js' },
+                { from: './js/libraries/jspdf.min.js', to: 'jspdf.min.js' },
             ],
         }),
     ],
