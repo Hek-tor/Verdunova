@@ -7,16 +7,12 @@ export class ItemService extends Service {
     }
 
     getProducts() {
-        const url = './js/services/itemServices/products.json';
+        const url = `${this.getURL()}/products`;
 
-        fetch(url, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(response => {
+        fetch(url).then(response => {
             response.json().then(data => {
                 let itemList = [];
-                data.products.forEach((item) => {
+                data.forEach((item) => {
                     let itemCard = new ItemCard(item.id, item.imageURL, item.name, item.price, item.category);
                     itemList.push(itemCard);
                 });
