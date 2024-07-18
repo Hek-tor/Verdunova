@@ -6,10 +6,6 @@
 * @version 1.0.0
 */
 import { AppManager } from "./appManager.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
 window.addEventListener('load', init, false);
 
 function init() {

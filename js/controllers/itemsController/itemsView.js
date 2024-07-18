@@ -54,7 +54,7 @@ export class ItemsView extends ViewForController {
                 title: 'modalTittle',
                 image: 'modalImage',
                 closeButton: 'closeButtonModal',
-                confirmButton: 'confirmButtonModal',
+                confirmButton: 'btnAddProduct',
             },
             showClass: {
                 popup: `animate__animated animate__fadeInDown animate__faster`
@@ -95,7 +95,7 @@ export class ItemsView extends ViewForController {
                 title: 'modalTittle',
                 image: 'modalImage',
                 closeButton: 'closeButtonModal',
-                confirmButton: 'confirmButtonModal',
+                confirmButton: 'btnAddProduct',
             },
             showClass: {
                 popup: `animate__animated animate__fadeInDown animate__faster`
