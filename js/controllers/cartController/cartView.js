@@ -121,7 +121,7 @@ export class CartView extends ViewForController {
 
     newForm(price) {
         const name = `<input type=text"" id="swal-name" class="swal2-input swal-form" placeholder="Ingrese su nombre">`;
-        const number = `<input type="number" id="swal-number" class="swal2-input swal-form" placeholder="Ingrese su número celular">`;
+        const number = `<input type="number" id="swal-number" class="swal2-input swal-form" placeholder="Ingrese número celular">`;
         const location = `<input type=text"" id="swal-location" class="swal2-input swal-form" placeholder="Ingrese su dirección">`;
         const total = `<p class="swal-price">Total a pagar: ₡ ${price}</p>`;
         let form = `${name} ${number} ${location} ${total}`;
