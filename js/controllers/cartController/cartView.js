@@ -39,7 +39,7 @@ export class CartView extends ViewForController {
             showConfirmButton: true,
             focusConfirm: true,
             confirmButtonColor: "#F77F00",
-            confirmButtonText: "Confirmar compra",
+            confirmButtonText: "Confirmar pedido",
             showCloseButton: true,
             html: form,
             customClass: {

@@ -1,6 +1,6 @@
 .checkOut {
     font-family: "Mulish", sans-serif;
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
@@ -8,8 +8,8 @@
 }
 
 .swal-form {
-    width: 250px;
-    height: 35px;
+    width: 300px;
+    height: 25px;
     box-sizing: border-box;
     border-radius: 0px;
     border: none;
@@ -38,7 +38,7 @@ div>.checkOut {
     text-align: center;
     text-wrap: wrap;
     margin-top: 35px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .swal-form:focus,

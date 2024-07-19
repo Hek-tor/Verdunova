@@ -61,8 +61,8 @@
 .itemDiv {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-evenly;
+    width: 90%;
     height: 150px;
     border-bottom: 1px solid var(--primary-color);
     align-items: center;
