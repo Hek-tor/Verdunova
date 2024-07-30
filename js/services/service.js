@@ -6,6 +6,6 @@ export class Service {
     getURL() {
         const production = 'https://verdunova-api.vercel.app';
         const development = 'http://localhost:3000';
-        return development;
+        return production;
     }
 }
