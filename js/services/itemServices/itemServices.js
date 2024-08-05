@@ -34,10 +34,7 @@ export class ItemService extends Service {
                 catch (error) {
                     console.error('Error fetching products:', error);
                 }
-            } else {
-                console.log('User is not authenticated');
             }
         });
     }
-
 }
