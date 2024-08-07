@@ -35,8 +35,8 @@ export class Service {
     }
 
     getURL() {
+        // const development = 'http://localhost:3000';
         const production = 'https://verdunova-api.vercel.app';
-        const development = 'http://localhost:3000';
         return production;
     }
     

@@ -7,7 +7,6 @@ export class InvoiceService extends Service {
 
     sendInvoice(userInvoice) {
         let dataOrder = userInvoice;
-
         let url = `${this.getURL()}/invoice`;
         let params = {
             method: "POST",
@@ -16,7 +15,6 @@ export class InvoiceService extends Service {
             },
             body: JSON.stringify(dataOrder),
         };
-
         fetch(url, params).then(response => {
             response.json()
                 .catch(error => {
